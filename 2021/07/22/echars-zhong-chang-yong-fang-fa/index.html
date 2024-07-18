@@ -12,7 +12,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="highCharts图表使用总结, 唐宇的博客">
+    <meta name="keywords" content="Echars中常用方法, 唐宇的博客">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
@@ -21,14 +21,10 @@
 
 
 闲来无事，随便写写……
-Highcharts 基本组成
+Echars中常用方法
+1.什么是Echars?
 
-名词解释
-1.坐标轴（Axis）
-设置
- crosshair: false, // 是否显示十字
- opposite: false,  //对面显示
- showEmpty: ">
+一个纯JavaScript图表库。ECharts官网，缩写来自Enterprise Charts，商业级数据图表，一个纯Javascript的图表库，可以流">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -36,7 +32,7 @@ Highcharts 基本组成
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>highCharts图表使用总结 | 唐宇的博客</title>
+    <title>Echars中常用方法 | 唐宇的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -310,13 +306,13 @@ Highcharts 基本组成
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/26.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        highCharts图表使用总结
+                        Echars中常用方法
                     </div>
                 </div>
             </div>
@@ -427,8 +423,8 @@ Highcharts 基本组成
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/方法/" target="_blank">
-                            <span class="chip bg-color">方法</span>
+                        <a href="/tags/技术/" target="_blank">
+                            <span class="chip bg-color">技术</span>
                         </a>
                         
                     </div>
@@ -439,8 +435,8 @@ Highcharts 基本组成
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/方法/" class="post-category" target="_blank">
-                            方法
+                        <a href="/categories/技术/" class="post-category" target="_blank">
+                            技术
                         </a>
                         
                     </div>
@@ -451,7 +447,7 @@ Highcharts 基本组成
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2020-09-17
+                    2021-07-22
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -465,14 +461,14 @@ Highcharts 基本组成
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1k
+                    4.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    21 分
                 </div>
                 
                 
@@ -489,201 +485,723 @@ Highcharts 基本组成
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <div align="middle">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=411214279&auto=1&height=66"></iframe>
 </div>
 
 <p>闲来无事，随便写写……</p>
-<h1 id="Highcharts-基本组成"><a href="#Highcharts-基本组成" class="headerlink" title="Highcharts 基本组成"></a>Highcharts 基本组成</h1><hr>
-<p><img src="2.jpg" alt></p>
-<p><a href="https://api.highcharts.com.cn/highcharts" target="_blank" rel="noopener">名词解释</a></p>
-<h1 id="1-坐标轴（Axis）"><a href="#1-坐标轴（Axis）" class="headerlink" title="1.坐标轴（Axis）"></a>1.坐标轴（Axis）</h1><ul>
-<li><p>设置</p>
-<pre><code> crosshair: false, // 是否显示十字
- opposite: false,  //对面显示
- showEmpty: ,//是否显示空轴
- showFirstLabel:, //是否显示第一个轴标签
- showLastLabel:, //是否显示最后一个轴标签
- height: &#39;100%&#39;,
- lineWidth: 0, // 刻度线宽度
- tickAmount:4, // 刻度总数
- tickWidth: 0,
- tickPosition: &#39;inside&#39;,//刻度位置
- gridLineWidth: 1, // 网格宽度
- gridLineColor: &#39;#E5E5E5&#39;,//网格颜色
- labels: {
-   enabled:是否显示,
-   style: {
-     color: &#39;#A1A1A1&#39;,
-     fontSize: &#39;0.49rem&#39;,
-   },
-   align:&quot;right&quot;, // 文字位置
-   x:60, // x轴偏移
-   y:-10,// y轴偏移
-   format:&#39;{value:.,0f}&#39;,
-   formatter:function(){
-     return (parseFloat(this.value)).toFixed(1) +&#39;%&#39;;// 格式化保留一位小数
-   }
- }</code></pre></li>
+<h1 id="Echars中常用方法"><a href="#Echars中常用方法" class="headerlink" title="Echars中常用方法"></a>Echars中常用方法</h1><hr>
+<p><strong>1.什么是Echars?</strong></p>
+<blockquote>
+<p>一个纯JavaScript图表库。<a href="https://www.echartsjs.com/zh/index.html" target="_blank" rel="noopener">ECharts官网</a>，缩写来自Enterprise Charts，商业级数据图表，一个纯Javascript的图表库，可以流畅的运行在PC和移动设备上，兼容当前绝大部分浏览器（IE6/7/8/9/10/11，chrome，firefox，Safari等），底层依赖轻量级的Canvas类库ZRender，提供直观，生动，可交互，可高度个性化定制的数据可视化图表。创新的拖拽重计算、数据视图、值域漫游等特性大大增强了用户体验，赋予了用户对数据进行挖掘、整合的能力。</p>
+</blockquote>
+<h2 id="1-Echars术语速查手册-gt"><a href="#1-Echars术语速查手册-gt" class="headerlink" title="1. Echars术语速查手册 -&gt;"></a>1. Echars术语速查手册 -&gt;</h2><ul>
+<li><a href="https://www.echartsjs.com/zh/cheat-sheet.html" target="_blank" rel="noopener">Echars术语速查手册</a></li>
 </ul>
-<ul>
-<li><p>函数及属性</p>
-<pre><code>addPlotBand(): 增加标识区
-addPlotLine(): 新增标示线
-getExtremes(): 获取极值
-remove(): 删除
-removePlotBand(): 删除标识区
-removePlotLine(): 删除标示线
-setCategories(): 设置分类
-setExtremes(): 设置极值 --可定制x轴y轴值 
-setTitle(): 更新标题
-toPixels(): 转换成像素值
-toValue(): 转换成值
-update(): 更新</code></pre></li>
-</ul>
-<h1 id="2-调整曲线图的粗细、点大小、点形状、空心点"><a href="#2-调整曲线图的粗细、点大小、点形状、空心点" class="headerlink" title="2.调整曲线图的粗细、点大小、点形状、空心点"></a>2.调整曲线图的粗细、点大小、点形状、空心点</h1><ul>
-<li><p>实心圆点</p>
-<pre><code>粗细：lineWidth 默认值为2
-plotOptions: {
-  series: {
-    marker: {
-        enabled: true, /*数据点是否显示*/
-        radius: 3, //曲线点半径，默认是4
-        symbol: &#39;diamond&#39; //曲线点类型：&#39;circle&#39;, &#39;square&#39;, &#39;diamond&#39;, &#39;triangle&#39;,&#39;triangle-down&#39;，默认是&#39;circle&#39;,也可自定义
-    }
-  }
-},</code></pre></li>
-<li><p>空心圆点</p>
-<pre><code>var plotOptions = {
-      series: {
-          marker: {
-              enabled: true, /*数据点是否显示*/
-              radius: 5,  /*数据点大小px*/         
-             // 空心数据点
-             fillColor: &#39;#FFFFFF&#39;,/*数据点颜色*/
-              lineWidth: 2,
-              lineColor: null, // 边框颜色 为null 时时当前线颜色
-                    states:{
-                hover:{
-                  enabled:false,
-                }
-              }
-          }       
-   }
-}</code></pre></li>
-</ul>
-<h1 id="3-多色带折线图"><a href="#3-多色带折线图" class="headerlink" title="3.多色带折线图"></a>3.多色带折线图</h1><pre><code>{
-      name: &#39;策略评分&#39;,
-      data: [7.0, 6.9, 9.5, 14.5, 18.2, 21.5, 25.2,
-          26.5, 23.3, 18.3, 13.9, 9.6],
-          // 一 negativeColor: 负值颜色
-          // 二
-          zones: [{
-                  value: 10, // 范围
-                  color: &#39;#f7a35c&#39;, // 颜色
-                  //dashStyle: &#39;dot&#39; // 线类型
-              },{
-                  color: &#39;#90ed7d&#39;
-              }]
-    }</code></pre><p>效果图<br><img src="1.jpg" alt></p>
-<h1 id="4-标示区（plotBands）"><a href="#4-标示区（plotBands）" class="headerlink" title="4.标示区（plotBands）"></a>4.标示区（plotBands）</h1><ul>
-<li><p>标示区的基本配置</p>
-<pre><code>xAxis: {
-    // ... 省略代码
-    plotBands: [{
-        from: ,               // 标示区开始值
-        to: ,                 // 标示区结束值
-        label: {              // 标示区文字标签配置，详见API
-         text: 内容,
-          y:315, // 图表高度
-          align:&quot;right&quot;, // 位置
-          style: {
-            color: &#39;#FFA02C &#39;,
-            fontSize:&#39;0.45rem&#39;,
-          }
-        },
-        color: &#39;&#39;,            // 标示区背景颜色
-        borderWidth: ,        // 标示区边框宽度
-        borderColor: ,        // 标示区边框颜色
-        id: ,                 // 标示区 id，用于删除等操作
-        zIndex:,              // 标示区层叠，用于调整显示层次
-        events: {             // 事件，支持 click、mouseover、mouseout、mousemove等事件
-            click: function(e) {
-              // this 获取当前表示区配置
-            },
-            mouseover: function(e) {
-            },
-            mouseout: function(e) {
-            },
-            mousemove: function(e) {
-            }
-        }
-
-    }]
-},
-yAxis: {
-    // ... 省略代码
-    plotBands: [{
-        // 标示区配置，同上
-    }]
-}`</code></pre></li>
-<li><p>动态增加或删除标示区</p>
-<pre><code>// 实例化图表并保存图表对象
-var chart = new Highcharts.Chart();
-
-var axis = chart.xAxis[0];
-
-axis.addPlotBand({
-  id: &#39;myXAxisPlotBand&#39;,     // id 用于后续删除用
-  from: 20,
-  to: 40,
-  // ...
-});
-// 删除
-var chart = new Highcharts.Chart();
-
-var axis = chart.xAxis[0];
-
-axis.removePlotBand(&#39;myXAxisPlotBand&#39;)</code></pre></li>
-</ul>
-<h1 id="5-标示线（plotLines）"><a href="#5-标示线（plotLines）" class="headerlink" title="5.标示线（plotLines）"></a>5.标示线（plotLines）</h1><ul>
-<li><p>在x轴上值为3的地方画一条红色的宽度为2px的线</p>
-<p>xAxis: {</p>
-<pre><code>// ... 省略代码
-plotLines:[{
-    color:&#39;red&#39;,            //线的颜色，定义为红色
-    dashStyle:&#39;longdashdot&#39;,//标示线的样式，默认是solid（实线），这里定义为长虚线
-    value:3,                //定义在哪个值上显示标示线，这里是在x轴上刻度为3的值处垂直化一条线
-    width:2                 //标示线的宽度，2px
-}]</code></pre><p>}</p>
-<h1 id="6-数据提示框（Tooltip）"><a href="#6-数据提示框（Tooltip）" class="headerlink" title="6. 数据提示框（Tooltip）"></a>6. 数据提示框（Tooltip）</h1><p>  tooltip: {</p>
-<pre><code>  backgroundColor: &#39;#FCFFC5&#39;,   // 背景颜色
-  borderColor: &#39;black&#39;,         // 边框颜色
-  borderRadius: 10,             // 边框圆角
-  borderWidth: 3,               // 边框宽度
-  shadow: ture,                 // 是否显示阴影
-  animation: true               // 是否启用动画效果
-  style: {                      // 文字内容相关样式
-      color: &quot;#ff0000&quot;,
-      fontSize: &quot;12px&quot;,
-      fontWeight: &quot;blod&quot;,
-      fontFamily: &quot;Courir new&quot;
+<h2 id="2-echarts属性的设置（完整大全）"><a href="#2-echarts属性的设置（完整大全）" class="headerlink" title="2. echarts属性的设置（完整大全）"></a>2. echarts属性的设置（完整大全）</h2><h3 id="全图默认背景"><a href="#全图默认背景" class="headerlink" title="全图默认背景"></a>全图默认背景</h3><pre><code>  // backgroundColor: ‘rgba(0,0,0,0)’,
+  // 默认色板
+  color: [&#39;#ff7f50&#39;,&#39;#87cefa&#39;,&#39;#da70d6&#39;,&#39;#32cd32&#39;,&#39;#6495ed&#39;,
+      &#39;#ff69b4&#39;,&#39;#ba55d3&#39;,&#39;#cd5c5c&#39;,&#39;#ffa500&#39;,&#39;#40e0d0&#39;,
+      &#39;#1e90ff&#39;,&#39;#ff6347&#39;,&#39;#7b68ee&#39;,&#39;#00fa9a&#39;,&#39;#ffd700&#39;,
+      &#39;#6699FF&#39;,&#39;#ff6666&#39;,&#39;#3cb371&#39;,&#39;#b8860b&#39;,&#39;#30e0e0&#39;],</code></pre><h3 id="1-图表标题"><a href="#1-图表标题" class="headerlink" title="1.图表标题"></a>1.图表标题</h3><pre><code>  title: {
+      x: &#39;left&#39;,                // 水平安放位置，默认为左对齐，可选为：
+                        // &#39;center&#39; ¦ &#39;left&#39; ¦ &#39;right&#39;
+                        // ¦ {number}（x坐标，单位px）
+      y: &#39;top&#39;,             // 垂直安放位置，默认为全图顶端，可选为：
+                        // &#39;top&#39; ¦ &#39;bottom&#39; ¦ &#39;center&#39;
+                        // ¦ {number}（y坐标，单位px）
+      //textAlign: null          // 水平对齐方式，默认根据x设置自动调整
+      backgroundColor: &#39;rgba(0,0,0,0)&#39;,
+      borderColor: &#39;#ccc&#39;,          // 标题边框颜色
+      borderWidth: 0,           // 标题边框线宽，单位px，默认为0（无边框）
+      padding: 5,             // 标题内边距，单位px，默认各方向内边距为5，
+                                // 接受数组分别设定上右下左边距，同css
+      itemGap: 10,             // 主副标题纵向间隔，单位px，默认为10，
+      textStyle: {
+          fontSize: 18,
+          fontWeight: &#39;bolder&#39;,
+          color: &#39;#333&#39;                             // 主标题文字颜色
+      },
+      subtextStyle: {
+          color: &#39;#aaa&#39;                            // 副标题文字颜色
+      }
+  },</code></pre><h3 id="2-图例"><a href="#2-图例" class="headerlink" title="2.图例"></a>2.图例</h3><pre><code>  legend: {
+      orient: &#39;horizontal&#39;,          // 布局方式，默认为水平布局，可选为：
+                        // &#39;horizontal&#39; ¦ &#39;vertical&#39;
+      x: &#39;center&#39;,                // 水平安放位置，默认为全图居中，可选为：
+                                // &#39;center&#39; ¦ &#39;left&#39; ¦ &#39;right&#39;
+                        // ¦ {number}（x坐标，单位px）
+      y: &#39;top&#39;,              // 垂直安放位置，默认为全图顶端，可选为：
+                        // &#39;top&#39; ¦ &#39;bottom&#39; ¦ &#39;center&#39;
+                        // ¦ {number}（y坐标，单位px）
+      backgroundColor: &#39;rgba(0,0,0,0)&#39;,
+      borderColor: &#39;#ccc&#39;,            // 图例边框颜色
+      borderWidth: 0,                // 图例边框线宽，单位px，默认为0（无边框）
+      padding: 5,                  // 图例内边距，单位px，默认各方向内边距为5，
+                                // 接受数组分别设定上右下左边距，同css
+      itemGap: 10,              // 各个item之间的间隔，单位px，默认为10，
+                          // 横向布局时为水平间隔，纵向布局时为纵向间隔
+      itemWidth: 20,             // 图例图形宽度
+      itemHeight: 14,            // 图例图形高度
+      textStyle: {
+          color: &#39;#333&#39;                              // 图例文字颜色
+      }
+  },</code></pre><h3 id="3-值域"><a href="#3-值域" class="headerlink" title="3.值域"></a>3.值域</h3><pre><code>  dataRange: {
+      orient: &#39;vertical&#39;,             // 布局方式，默认为垂直布局，可选为：
+                          // &#39;horizontal&#39; ¦ &#39;vertical&#39;
+      x: &#39;left&#39;,                   // 水平安放位置，默认为全图左对齐，可选为：
+                          // &#39;center&#39; ¦ &#39;left&#39; ¦ &#39;right&#39;
+                          // ¦ {number}（x坐标，单位px）
+      y: &#39;bottom&#39;,                  // 垂直安放位置，默认为全图底部，可选为：
+                          // &#39;top&#39; ¦ &#39;bottom&#39; ¦ &#39;center&#39;
+                          // ¦ {number}（y坐标，单位px）
+      backgroundColor: &#39;rgba(0,0,0,0)&#39;,
+      borderColor: &#39;#ccc&#39;,             // 值域边框颜色
+      borderWidth: 0,                 // 值域边框线宽，单位px，默认为0（无边框）
+      padding: 5,                    // 值域内边距，单位px，默认各方向内边距为5，
+                          // 接受数组分别设定上右下左边距，同css
+      itemGap: 10,               // 各个item之间的间隔，单位px，默认为10，
+                          // 横向布局时为水平间隔，纵向布局时为纵向间隔
+      itemWidth: 20,             // 值域图形宽度，线性渐变水平布局宽度为该值 * 10
+      itemHeight: 14,            // 值域图形高度，线性渐变垂直布局高度为该值 * 10
+      splitNumber: 5,            // 分割段数，默认为5，为0时为线性渐变
+      color:[&#39;#1e90ff&#39;,&#39;#f0ffff&#39;],//颜色
+      //text:[&#39;高&#39;,&#39;低&#39;],              // 文本，默认为数值文本
+      textStyle: {
+          color: &#39;#333&#39;                                // 值域文字颜色
+      }
   },
-  formatter:function() { // 格式化函数
-      return &#39;&lt;span style=&quot;color:{&#39;+this.series.color+&#39;}&quot;&gt;u25CF&lt;/span&gt; {&#39;+
-            this.series.name+&#39;}: &lt;b&gt;{&#39;+this.y+&#39;}&lt;/b&gt;&lt;br/&gt;.&#39;
-  }</code></pre><p>  }<br><a href="https://wizardforcel.gitbooks.io/highcharts-tutorial/content/16.html" target="_blank" rel="noopener">详见API</a></p>
+
+  toolbox: {
+      orient: &#39;horizontal&#39;,            // 布局方式，默认为水平布局，可选为：
+                          // &#39;horizontal&#39; ¦ &#39;vertical&#39;
+      x: &#39;right&#39;,              // 水平安放位置，默认为全图右对齐，可选为：
+                          // &#39;center&#39; ¦ &#39;left&#39; ¦ &#39;right&#39;
+                          // ¦ {number}（x坐标，单位px）
+      y: &#39;top&#39;,               // 垂直安放位置，默认为全图顶端，可选为：
+                          // &#39;top&#39; ¦ &#39;bottom&#39; ¦ &#39;center&#39;
+                          // ¦ {number}（y坐标，单位px）
+      color : [&#39;#1e90ff&#39;,&#39;#22bb22&#39;,&#39;#4b0082&#39;,&#39;#d2691e&#39;],
+      backgroundColor: &#39;rgba(0,0,0,0)&#39;,    // 工具箱背景颜色
+      borderColor: &#39;#ccc&#39;,             // 工具箱边框颜色
+      borderWidth: 0,                 // 工具箱边框线宽，单位px，默认为0（无边框）
+      padding: 5,                    // 工具箱内边距，单位px，默认各方向内边距为5，
+                                  // 接受数组分别设定上右下左边距，同css
+      itemGap: 10,                  // 各个item之间的间隔，单位px，默认为10，
+                                  // 横向布局时为水平间隔，纵向布局时为纵向间隔
+      itemSize: 16,              // 工具箱图形宽度
+      featureImageIcon : {},            // 自定义图片icon
+      featureTitle : {
+          mark : &#39;辅助线开关&#39;,
+          markUndo : &#39;删除辅助线&#39;,
+          markClear : &#39;清空辅助线&#39;,
+          dataZoom : &#39;区域缩放&#39;,
+          dataZoomReset : &#39;区域缩放后退&#39;,
+          dataView : &#39;数据视图&#39;,
+          lineChart : &#39;折线图切换&#39;,
+          barChart : &#39;柱形图切换&#39;,
+          restore : &#39;还原&#39;,
+          saveAsImage : &#39;保存为图片&#39;
+      }
+  },</code></pre><h3 id="4-提示框"><a href="#4-提示框" class="headerlink" title="4.提示框"></a>4.提示框</h3><pre><code>  tooltip: {
+      trigger: &#39;item&#39;,           // 触发类型，默认数据触发，见下图，可选为：&#39;item&#39; ¦ &#39;axis&#39;
+      showDelay: 20,             // 显示延迟，添加显示延迟可以避免频繁切换，单位ms
+      hideDelay: 100,            // 隐藏延迟，单位ms
+      transitionDuration : 0.4,         // 动画变换时间，单位s
+      backgroundColor: &#39;rgba(0,0,0,0.7)&#39;,  // 提示背景颜色，默认为透明度为0.7的黑色
+      borderColor: &#39;#333&#39;,            // 提示边框颜色
+      borderRadius: 4,                // 提示边框圆角，单位px，默认为4
+      borderWidth: 0,                // 提示边框线宽，单位px，默认为0（无边框）
+      padding: 5,                   // 提示内边距，单位px，默认各方向内边距为5，
+                                  // 接受数组分别设定上右下左边距，同css
+      axisPointer : {                 // 坐标轴指示器，坐标轴触发有效
+          type : &#39;line&#39;,         // 默认为直线，可选为：&#39;line&#39; | &#39;shadow&#39;
+          lineStyle : {          // 直线指示器样式设置
+              color: &#39;#48b&#39;,
+              width: 2,
+              type: &#39;solid&#39;
+          },
+          shadowStyle : {              // 阴影指示器样式设置
+              width: &#39;auto&#39;,         // 阴影大小
+              color: &#39;rgba(150,150,150,0.3)&#39;  // 阴影颜色
+          }
+      },
+      textStyle: {
+          color: &#39;#fff&#39;
+      }
+  },</code></pre><h3 id="5-区域缩放控制器"><a href="#5-区域缩放控制器" class="headerlink" title="5.区域缩放控制器"></a>5.区域缩放控制器</h3><pre><code>  dataZoom: {
+      orient: &#39;horizontal&#39;,         // 布局方式，默认为水平布局，可选为：
+                              // &#39;horizontal&#39; ¦ &#39;vertical&#39;
+      // x: {number},              // 水平安放位置，默认为根据grid参数适配，可选为：
+                              // {number}（x坐标，单位px）
+      // y: {number},              // 垂直安放位置，默认为根据grid参数适配，可选为：
+                              // {number}（y坐标，单位px）
+      // width: {number},           // 指定宽度，横向布局时默认为根据grid参数适配
+      // height: {number},          // 指定高度，纵向布局时默认为根据grid参数适配
+      backgroundColor: &#39;rgba(0,0,0,0)&#39;,    // 背景颜色
+      dataBackgroundColor: &#39;#eee&#39;,       // 数据背景颜色
+      fillerColor: &#39;rgba(144,197,237,0.2)&#39;, // 填充颜色
+      handleColor: &#39;rgba(70,130,180,0.8)&#39;       // 手柄颜色
+  },</code></pre><h3 id="6-网格"><a href="#6-网格" class="headerlink" title="6.网格"></a>6.网格</h3><pre><code>  grid: {
+      x: 80,
+      y: 60,
+      x2: 80,
+      y2: 60,
+      // width: {totalWidth} - x - x2,
+      // height: {totalHeight} - y - y2,
+      backgroundColor: &#39;rgba(0,0,0,0)&#39;,
+      borderWidth: 1,
+      borderColor: &#39;#ccc&#39;
+  },</code></pre><h3 id="7-类目轴"><a href="#7-类目轴" class="headerlink" title="7.类目轴"></a>7.类目轴</h3><pre><code>  categoryAxis: {
+      position: &#39;bottom&#39;,        // 位置
+      nameLocation: &#39;end&#39;,      // 坐标轴名字位置，支持&#39;start&#39; | &#39;end&#39;
+      boundaryGap: true,     // 类目起始和结束两端空白策略
+      axisLine: {            // 坐标轴线
+          show: true,         // 默认显示，属性show控制显示与否
+          lineStyle: {        // 属性lineStyle控制线条样式
+              color: &#39;#48b&#39;,
+              width: 2,
+              type: &#39;solid&#39;
+          }
+      },
+      axisTick: {            // 坐标轴小标记
+          show: true,       // 属性show控制显示与否，默认不显示
+          interval: &#39;auto&#39;,
+          // onGap: null,
+          inside : false,        // 控制小标记是否在grid里
+          length :5,         // 属性length控制线长
+          lineStyle: {       // 属性lineStyle控制线条样式
+              color: &#39;#333&#39;,
+              width: 1
+          }
+      },
+      axisLabel: {           // 坐标轴文本标签，详见axis.axisLabel
+          show: true,
+          interval: &#39;auto&#39;,
+          rotate: 0,
+          margin: 8,
+          // formatter: null,
+          textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+              color: &#39;#333&#39;
+          }
+      },
+      splitLine: {                // 分隔线
+          show: true,        // 默认显示，属性show控制显示与否
+          // onGap: null,
+          lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+              color: [&#39;#ccc&#39;],
+              width: 1,
+              type: &#39;solid&#39;
+          }
+      },
+      splitArea: {                // 分隔区域
+          show: false,       // 默认不显示，属性show控制显示与否
+          // onGap: null,
+          areaStyle: {        // 属性areaStyle（详见areaStyle）控制区域样式
+              color: [&#39;rgba(250,250,250,0.3)&#39;,&#39;rgba(200,200,200,0.3)&#39;]
+          }
+      }
+  },</code></pre><h3 id="8-数值型坐标轴默认参数"><a href="#8-数值型坐标轴默认参数" class="headerlink" title="8.数值型坐标轴默认参数"></a>8.数值型坐标轴默认参数</h3><pre><code>  valueAxis: {
+      position: &#39;left&#39;,      // 位置
+      nameLocation: &#39;end&#39;,     // 坐标轴名字位置，支持&#39;start&#39; | &#39;end&#39;
+      nameTextStyle: {},     // 坐标轴文字样式，默认取全局样式
+      boundaryGap: [0, 0],    // 数值起始和结束两端空白策略
+      splitNumber: 5,        // 分割段数，默认为5
+      axisLine: {             // 坐标轴线
+          show: true,      // 默认显示，属性show控制显示与否
+          lineStyle: {      // 属性lineStyle控制线条样式
+              color: &#39;#48b&#39;,
+              width: 2,
+              type: &#39;solid&#39;
+          }
+      },
+      axisTick: {            // 坐标轴小标记
+          show: false,       // 属性show控制显示与否，默认不显示
+          inside : false,      // 控制小标记是否在grid里
+          length :5,          // 属性length控制线长
+          lineStyle: {       // 属性lineStyle控制线条样式
+              color: &#39;#333&#39;,
+              width: 1
+          }
+      },
+      axisLabel: {           // 坐标轴文本标签，详见axis.axisLabel
+          show: true,
+          rotate: 0,
+          margin: 8,
+          // formatter: null,
+          textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+              color: &#39;#333&#39;
+          }
+      },
+      splitLine: {                // 分隔线
+          show: true,        // 默认显示，属性show控制显示与否
+          lineStyle: {          // 属性lineStyle（详见lineStyle）控制线条样式
+              color: [&#39;#ccc&#39;],
+              width: 1,
+              type: &#39;solid&#39;
+          }
+      },
+      splitArea: {                // 分隔区域
+          show: false,       // 默认不显示，属性show控制显示与否
+          areaStyle: {       // 属性areaStyle（详见areaStyle）控制区域样式
+              color: [&#39;rgba(250,250,250,0.3)&#39;,&#39;rgba(200,200,200,0.3)&#39;]
+          }
+      }
+  },
+
+  polar : {
+      center : [&#39;50%&#39;, &#39;50%&#39;],    // 默认全局居中
+      radius : &#39;75%&#39;,
+      startAngle : 90,
+      splitNumber : 5,
+      name : {
+          show: true,
+          textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+              color: &#39;#333&#39;
+          }
+      },
+      axisLine: {            // 坐标轴线
+          show: true,         // 默认显示，属性show控制显示与否
+          lineStyle: {        // 属性lineStyle控制线条样式
+              color: &#39;#ccc&#39;,
+              width: 1,
+              type: &#39;solid&#39;
+          }
+      },
+      axisLabel: {                // 坐标轴文本标签，详见axis.axisLabel
+          show: false,
+          textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+              color: &#39;#333&#39;
+          }
+      },
+      splitArea : {
+          show : true,
+          areaStyle : {
+              color: [&#39;rgba(250,250,250,0.3)&#39;,&#39;rgba(200,200,200,0.3)&#39;]
+          }
+      },
+      splitLine : {
+          show : true,
+          lineStyle : {
+              width : 1,
+              color : &#39;#ccc&#39;
+          }
+      }
+  },</code></pre><h3 id="9-柱形图默认参数"><a href="#9-柱形图默认参数" class="headerlink" title="9.柱形图默认参数"></a>9.柱形图默认参数</h3><pre><code>  bar: {
+      barMinHeight: 0,            // 最小高度改为0
+      // barWidth: null,        // 默认自适应
+      barGap: &#39;30%&#39;,           // 柱间距离，默认为柱形宽度的30%，可设固定值
+      barCategoryGap : &#39;20%&#39;,   // 类目间柱形距离，默认为类目间距的20%，可设固定值
+      itemStyle: {
+          normal: {
+              // color: &#39;各异&#39;,
+              barBorderColor: &#39;#fff&#39;,         // 柱条边线
+              barBorderRadius: 0,            // 柱条边线圆角，单位px，默认为0
+              barBorderWidth: 1,             // 柱条边线线宽，单位px，默认为1
+              label: {
+                  show: false
+                                          // position: 默认自适应，水平布局为&#39;top&#39;，垂直布局为&#39;right&#39;，可选为
+                                          // &#39;inside&#39;|&#39;left&#39;|&#39;right&#39;|&#39;top&#39;|&#39;bottom&#39;
+                                          // textStyle: null // 默认使用全局文本样式，详见TEXTSTYLE
+              }
+          },
+          emphasis: {
+              // color: &#39;各异&#39;,
+              barBorderColor: &#39;rgba(0,0,0,0)&#39;,            // 柱条边线
+              barBorderRadius: 0,                // 柱条边线圆角，单位px，默认为0
+              barBorderWidth: 1,                     // 柱条边线线宽，单位px，默认为1
+              label: {
+                  show: false
+                  // position: 默认自适应，水平布局为&#39;top&#39;，垂直布局为&#39;right&#39;，可选为
+                  //           &#39;inside&#39;|&#39;left&#39;|&#39;right&#39;|&#39;top&#39;|&#39;bottom&#39;
+                  // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+              }
+          }
+      }
+  },</code></pre><h3 id="10-折线图默认参数"><a href="#10-折线图默认参数" class="headerlink" title="10.折线图默认参数"></a>10.折线图默认参数</h3><pre><code>  line: {
+      itemStyle: {
+          normal: {
+              // color: 各异,
+              label: {
+                  show: false
+                  // position: 默认自适应，水平布局为&#39;top&#39;，垂直布局为&#39;right&#39;，可选为
+                  //           &#39;inside&#39;|&#39;left&#39;|&#39;right&#39;|&#39;top&#39;|&#39;bottom&#39;
+                  // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+              },
+              lineStyle: {
+                  width: 2,
+                  type: &#39;solid&#39;,
+                  shadowColor : &#39;rgba(0,0,0,0)&#39;, //默认透明
+                  shadowBlur: 5,
+                  shadowOffsetX: 3,
+                  shadowOffsetY: 3
+              }
+          },
+          emphasis: {
+              // color: 各异,
+              label: {
+                  show: false
+                  // position: 默认自适应，水平布局为&#39;top&#39;，垂直布局为&#39;right&#39;，可选为
+                  //           &#39;inside&#39;|&#39;left&#39;|&#39;right&#39;|&#39;top&#39;|&#39;bottom&#39;
+                  // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+              }
+          }
+      },
+      //smooth : false,
+      //symbol: null,             // 拐点图形类型
+      symbolSize: 2,          // 拐点图形大小
+      //symbolRotate : null,       // 拐点图形旋转控制
+      showAllSymbol: false                   // 标志图形默认只有主轴显示（随主轴标签间隔隐藏策略）
+  },</code></pre><h3 id="11-K线图默认参数"><a href="#11-K线图默认参数" class="headerlink" title="11.K线图默认参数"></a>11.K线图默认参数</h3><pre><code>  k: {
+      // barWidth : null              // 默认自适应
+      // barMaxWidth : null           // 默认自适应
+      itemStyle: {
+          normal: {
+              color: &#39;#fff&#39;,      // 阳线填充颜色
+              color0: &#39;#00aa11&#39;,  // 阴线填充颜色
+              lineStyle: {
+                  width: 1,
+                  color: &#39;#ff3200&#39;,    // 阳线边框颜色
+                  color0: &#39;#00aa11&#39;          // 阴线边框颜色
+              }
+          },
+          emphasis: {
+              // color: 各异,
+              // color0: 各异
+          }
+      }
+  },</code></pre><h3 id="12-散点图默认参数"><a href="#12-散点图默认参数" class="headerlink" title="12.散点图默认参数"></a>12.散点图默认参数</h3><pre><code>  scatter: {
+      //symbol: null,         // 图形类型
+      symbolSize: 4,       // 图形大小，半宽（半径）参数，当图形为方向或菱形则总宽度为symbolSize * 2
+      //symbolRotate : null,   // 图形旋转控制
+      large: false,        // 大规模散点图
+      largeThreshold: 2000,   // 大规模阀值，large为true且数据量&gt;largeThreshold才启用大规模模式
+      itemStyle: {
+          normal: {
+              // color: 各异,
+              label: {
+                  show: false
+                  // position: 默认自适应，水平布局为&#39;top&#39;，垂直布局为&#39;right&#39;，可选为
+                  //           &#39;inside&#39;|&#39;left&#39;|&#39;right&#39;|&#39;top&#39;|&#39;bottom&#39;
+                  // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+              }
+          },
+          emphasis: {
+              // color: &#39;各异&#39;
+              label: {
+                  show: false
+                  // position: 默认自适应，水平布局为&#39;top&#39;，垂直布局为&#39;right&#39;，可选为
+                  //           &#39;inside&#39;|&#39;left&#39;|&#39;right&#39;|&#39;top&#39;|&#39;bottom&#39;
+                  // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+              }
+          }
+      }
+  },</code></pre><h3 id="13-雷达图默认参数"><a href="#13-雷达图默认参数" class="headerlink" title="13.雷达图默认参数"></a>13.雷达图默认参数</h3><pre><code>  radar : {
+      itemStyle: {
+          normal: {
+              // color: 各异,
+              label: {
+                  show: false
+              },
+              lineStyle: {
+                  width: 2,
+                  type: &#39;solid&#39;
+              }
+          },
+          emphasis: {
+              // color: 各异,
+              label: {
+                  show: false
+              }
+          }
+      },
+      //symbol: null,          // 拐点图形类型
+      symbolSize: 2          // 可计算特性参数，空数据拖拽提示图形大小
+      //symbolRotate : null,    // 图形旋转控制
+  },</code></pre><h3 id="14-饼图默认参数"><a href="#14-饼图默认参数" class="headerlink" title="14.饼图默认参数"></a>14.饼图默认参数</h3><pre><code>  pie: {
+      center : [&#39;50%&#39;, &#39;50%&#39;],          // 默认全局居中
+      radius : [0, &#39;75%&#39;],
+      clockWise : false,             // 默认逆时针
+      startAngle: 90,
+      minAngle: 0,                 // 最小角度改为0
+      selectedOffset: 10,         // 选中是扇区偏移量
+      itemStyle: {
+          normal: {
+              // color: 各异,
+              borderColor: &#39;#fff&#39;,
+              borderWidth: 1,
+              label: {
+                  show: true,
+                  position: &#39;outer&#39;
+                  // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+              },
+              labelLine: {
+                  show: true,
+                  length: 20,
+                  lineStyle: {
+                      // color: 各异,
+                      width: 1,
+                      type: &#39;solid&#39;
+                  }
+              }
+          },
+          emphasis: {
+              // color: 各异,
+              borderColor: &#39;rgba(0,0,0,0)&#39;,
+              borderWidth: 1,
+              label: {
+                  show: false
+                  // position: &#39;outer&#39;
+                  // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+              },
+              labelLine: {
+                  show: false,
+                  length: 20,
+                  lineStyle: {
+                      // color: 各异,
+                      width: 1,
+                      type: &#39;solid&#39;
+                  }
+              }
+          }
+      }
+  },
+
+  map: {
+      mapType: &#39;china&#39;,   // 各省的mapType暂时都用中文
+      mapLocation: {
+          x : &#39;center&#39;,
+          y : &#39;center&#39;
+          // width    // 自适应
+          // height   // 自适应
+      },
+      showLegendSymbol : true,       // 显示图例颜色标识（系列标识的小圆点），存在legend时生效
+      itemStyle: {
+          normal: {
+              // color: 各异,
+              borderColor: &#39;#fff&#39;,
+              borderWidth: 1,
+              areaStyle: {
+                  color: &#39;#ccc&#39;   //rgba(135,206,250,0.8)
+              },
+              label: {
+                  show: false,
+                  textStyle: {
+                      color: &#39;rgba(139,69,19,1)&#39;
+                  }
+              }
+          },
+          emphasis: {                // 也是选中样式
+              // color: 各异,
+              borderColor: &#39;rgba(0,0,0,0)&#39;,
+              borderWidth: 1,
+              areaStyle: {
+                  color: &#39;rgba(255,215,0,0.8)&#39;
+              },
+              label: {
+                  show: false,
+                  textStyle: {
+                      color: &#39;rgba(139,69,19,1)&#39;
+                  }
+              }
+          }
+      }
+  },
+
+  force : {
+      // 数据map到圆的半径的最小值和最大值
+      minRadius : 10,
+      maxRadius : 20,
+      density : 1.0,
+      attractiveness : 1.0,
+      // 初始化的随机大小位置
+      initSize : 300,
+      // 向心力因子，越大向心力越大
+      centripetal : 1,
+      // 冷却因子
+      coolDown : 0.99,
+      // 分类里如果有样式会覆盖节点默认样式
+      itemStyle: {
+          normal: {
+              // color: 各异,
+              label: {
+                  show: false
+                  // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+              },
+              nodeStyle : {
+                  brushType : &#39;both&#39;,
+                  color : &#39;#f08c2e&#39;,
+                  strokeColor : &#39;#5182ab&#39;
+              },
+              linkStyle : {
+                  strokeColor : &#39;#5182ab&#39;
+              }
+          },
+          emphasis: {
+              // color: 各异,
+              label: {
+                  show: false
+                  // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+              },
+              nodeStyle : {},
+              linkStyle : {}
+          }
+      }
+  },
+
+  chord : {
+      radius : [&#39;65%&#39;, &#39;75%&#39;],
+      center : [&#39;50%&#39;, &#39;50%&#39;],
+      padding : 2,
+      sort : &#39;none&#39;,   // can be &#39;none&#39;, &#39;ascending&#39;, &#39;descending&#39;
+      sortSub : &#39;none&#39;, // can be &#39;none&#39;, &#39;ascending&#39;, &#39;descending&#39;
+      startAngle : 90,
+      clockWise : false,
+      showScale : false,
+      showScaleText : false,
+      itemStyle : {
+          normal : {
+              label : {
+                  show : true
+                  // textStyle: null      // 默认使用全局文本样式，详见TEXTSTYLE
+              },
+              lineStyle : {
+                  width : 0,
+                  color : &#39;#000&#39;
+              },
+              chordStyle : {
+                  lineStyle : {
+                      width : 1,
+                      color : &#39;#666&#39;
+                  }
+              }
+          },
+          emphasis : {
+              lineStyle : {
+                  width : 0,
+                  color : &#39;#000&#39;
+              },
+              chordStyle : {
+                  lineStyle : {
+                      width : 2,
+                      color : &#39;#333&#39;
+                  }
+              }
+          }
+      }
+  },
+
+  island: {
+      r: 15,
+      calculateStep: 0.1  // 滚轮可计算步长 0.1 = 10%
+  },
+
+  markPoint : {
+      symbol: &#39;pin&#39;,         // 标注类型
+      symbolSize: 10,            // 标注大小，半宽（半径）参数，当图形为方向或菱形则总宽度为symbolSize * 2
+      //symbolRotate : null, // 标注旋转控制
+      itemStyle: {
+          normal: {
+              // color: 各异，
+              // borderColor: 各异,     // 标注边线颜色，优先于color
+              borderWidth: 2,         // 标注边线线宽，单位px，默认为1
+              label: {
+                  show: true,
+                  position: &#39;inside&#39;    // 可选为&#39;left&#39;|&#39;right&#39;|&#39;top&#39;|&#39;bottom&#39;
+                  // textStyle: null    // 默认使用全局文本样式，详见TEXTSTYLE
+              }
+          },
+          emphasis: {
+              // color: 各异
+              label: {
+                  show: true
+                  // position: &#39;inside&#39;    // &#39;left&#39;|&#39;right&#39;|&#39;top&#39;|&#39;bottom&#39;
+                  // textStyle: null     // 默认使用全局文本样式，详见TEXTSTYLE
+              }
+          }
+      }
+  },
+
+  markLine : {
+      // 标线起始和结束的symbol介绍类型，如果都一样，可以直接传string
+      symbol: [&#39;circle&#39;, &#39;arrow&#39;], 
+      // 标线起始和结束的symbol大小，半宽（半径）参数，当图形为方向或菱形则总宽度为symbolSize * 2
+      symbolSize: [2, 4],
+      // 标线起始和结束的symbol旋转控制
+      //symbolRotate : null,
+      itemStyle: {
+          normal: {
+              // color: 各异,           // 标线主色，线色，symbol主色
+              // borderColor: 随color,       // 标线symbol边框颜色，优先于color
+              borderWidth: 2,          // 标线symbol边框线宽，单位px，默认为2
+              label: {
+                  show: false,
+                  // 可选为 &#39;start&#39;|&#39;end&#39;|&#39;left&#39;|&#39;right&#39;|&#39;top&#39;|&#39;bottom&#39;
+                  position: &#39;inside&#39;, 
+                  textStyle: {         // 默认使用全局文本样式，详见TEXTSTYLE
+                      color: &#39;#333&#39;
+                  }
+              },
+              lineStyle: {
+                  // color: 随borderColor,    // 主色，线色，优先级高于borderColor和color
+                  // width: 随borderWidth,    // 优先于borderWidth
+                  type: &#39;solid&#39;,
+                  shadowColor : &#39;rgba(0,0,0,0)&#39;, //默认透明
+                  shadowBlur: 5,
+                  shadowOffsetX: 3,
+                  shadowOffsetY: 3
+              }
+          },
+          emphasis: {
+              // color: 各异
+              label: {
+                  show: false
+                  // position: &#39;inside&#39;   // &#39;left&#39;|&#39;right&#39;|&#39;top&#39;|&#39;bottom&#39;
+                  // textStyle: null    // 默认使用全局文本样式，详见TEXTSTYLE
+              },
+              lineStyle : {}
+          }
+      }
+  },
+
+  textStyle: {
+      decoration: &#39;none&#39;,
+      fontFamily: &#39;Arial, Verdana, sans-serif&#39;,
+      fontFamily2: &#39;微软雅黑&#39;,    // IE8- 字体模糊并且不支持不同字体混排，额外指定一份
+      fontSize: 12,
+      fontStyle: &#39;normal&#39;,
+      fontWeight: &#39;normal&#39;
+  },</code></pre><h3 id="15-默认标志图形类型列表"><a href="#15-默认标志图形类型列表" class="headerlink" title="15.默认标志图形类型列表"></a>15.默认标志图形类型列表</h3><pre><code>  symbolList : [
+    &#39;circle&#39;, &#39;rectangle&#39;, &#39;triangle&#39;, &#39;diamond&#39;,
+    &#39;emptyCircle&#39;, &#39;emptyRectangle&#39;, &#39;emptyTriangle&#39;, &#39;emptyDiamond&#39;
+  ],
+  loadingText : &#39;Loading...&#39;,</code></pre><h3 id="16-可计算特性配置，孤岛，提示颜色"><a href="#16-可计算特性配置，孤岛，提示颜色" class="headerlink" title="16.可计算特性配置，孤岛，提示颜色"></a>16.可计算特性配置，孤岛，提示颜色</h3><pre><code>  calculable: false,                       // 默认关闭可计算特性
+  calculableColor: &#39;rgba(255,165,0,0.6)&#39;,       // 拖拽提示边框颜色
+  calculableHolderColor: &#39;#ccc&#39;,               // 可计算占位提示颜色
+  nameConnector: &#39; &amp; &#39;,
+  valueConnector: &#39; : &#39;,
+  animation: true,
+  animationThreshold: 2500,           // 动画元素阀值，产生的图形原素超过2500不出动画
+  addDataAnimation: true,         // 动态数据接口是否开启动画效果
+  animationDuration: 2000,
+  animationEasing: &#39;ExponentialOut&#39;             //BounceOut</code></pre><h2 id="3-Echars官方案例"><a href="#3-Echars官方案例" class="headerlink" title="3. Echars官方案例"></a>3. Echars官方案例</h2><ul>
+<li><a href="https://www.echartsjs.com/examples/zh/index.html" target="_blank" rel="noopener">Echars官方案例</a></li>
+</ul>
+<h2 id="4-Echars社区经典模板"><a href="#4-Echars社区经典模板" class="headerlink" title="4. Echars社区经典模板"></a>4. <a href="https://gallery.echartsjs.com/explore.html" target="_blank" rel="noopener">Echars社区</a>经典模板</h2><ul>
+<li><p><a href="https://gallery.echartsjs.com/editor.html?c=xmCAi_XNuJ" target="_blank" rel="noopener">自定义tooltip，实时获取最新geojson数据</a><br><img src="2.jpg" alt></p>
+</li>
+<li><p><a href="https://gallery.echartsjs.com/editor.html?c=xPkPpAWqSt" target="_blank" rel="noopener">中国地图自定义轮播</a><br><img src="1.jpg" alt></p>
+</li>
+<li><p>……</p>
 </li>
 </ul>
-<h1 id="7-环图占比"><a href="#7-环图占比" class="headerlink" title="7.环图占比"></a>7.环图占比</h1><pre><code>  series: [{
-          innerSize: &#39;65%&#39;,  // 占比
-          data: this.y_data // 数据
-  }]</code></pre><h1 id="8-待添加"><a href="#8-待添加" class="headerlink" title="8.待添加"></a>8.待添加</h1><h1 id="相关网址"><a href="#相关网址" class="headerlink" title="相关网址"></a>相关网址</h1><ul>
-<li>highCharts-中文:<a href="https://wizardforcel.gitbooks.io/highcharts-tutorial/content/5.html" target="_blank" rel="noopener">(https://wizardforcel.gitbooks.io/highcharts-tutorial/content/5.html</a></li>
-<li>highCharts-官网:<a href="https://www.highcharts.com.cn/" target="_blank" rel="noopener">https://www.highcharts.com.cn/</a></li>
-<li>highCharts-API:<a href="https://api.highcharts.com.cn/highcharts" target="_blank" rel="noopener">https://api.highcharts.com.cn/highcharts</a></li>
-<li>highCharts-图集:<a href="https://www.highcharts.com.cn/demo/gallery" target="_blank" rel="noopener">https://www.highcharts.com.cn/demo/gallery</a></li>
-</ul>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>持续更新中……</p>
+<!-- ## 5.Echars在Vue项目中的使用 -->
+
+
+
+
+
+
+
 
             </div>
             <hr />
@@ -842,9 +1360,9 @@ plotLines:[{
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《highCharts图表使用总结》
+                    《Echars中常用方法》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2020/09/17/highcharts-tu-biao-shi-yong-zong-jie/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/07/22/echars-zhong-chang-yong-fang-fa/" property="cc:attributionName"
                rel="cc:attributionURL">
                 唐宇
             </a> 采用
@@ -885,7 +1403,7 @@ plotLines:[{
         repo: 'Lingtian007.github.io',
         owner: 'Lingtian007',
         admin: "Lingtian007",
-        id: '2020/09/17/highcharts-tu-biao-shi-yong-zong-jie/',
+        id: '2021/07/22/echars-zhong-chang-yong-fang-fa/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1172,13 +1690,13 @@ plotLines:[{
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2020/09/17/shou-xie-react-hooks/">
+                <a href="/2021/09/17/highcharts-tu-biao-shi-yong-zong-jie/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="手写 React Hooks">
+                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="highCharts图表使用总结">
                         
-                        <span class="card-title">手写 React Hooks</span>
+                        <span class="card-title">highCharts图表使用总结</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1189,14 +1707,14 @@ plotLines:[{
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-17
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-09-17
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/源码/" class="post-category" target="_blank">
-                                    源码
+                            <a href="/categories/方法/" class="post-category" target="_blank">
+                                    方法
                                 </a>
                             
                             
@@ -1206,8 +1724,8 @@ plotLines:[{
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/源码/" target="_blank">
-                        <span class="chip bg-color">源码</span>
+                    <a href="/tags/方法/" target="_blank">
+                        <span class="chip bg-color">方法</span>
                     </a>
                     
                 </div>
@@ -1221,13 +1739,13 @@ plotLines:[{
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2020/09/01/ji-yu-jquery-dai-shu-ju-de-ri-li-cha-jian/">
+                <a href="/2021/06/30/xiang-mu-pei-zhi-proxy-dai-li/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="基于jQuery带数据的日历插件">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="项目配置proxy代理">
                         
-                        <span class="card-title">基于jQuery带数据的日历插件</span>
+                        <span class="card-title">项目配置proxy代理</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1238,14 +1756,14 @@ plotLines:[{
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2020-09-01
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-06-30
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/插件/" class="post-category" target="_blank">
-                                    插件
+                            <a href="/categories/项目/" class="post-category" target="_blank">
+                                    项目
                                 </a>
                             
                             
@@ -1255,8 +1773,8 @@ plotLines:[{
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/插件/" target="_blank">
-                        <span class="chip bg-color">插件</span>
+                    <a href="/tags/项目/" target="_blank">
+                        <span class="chip bg-color">项目</span>
                     </a>
                     
                 </div>
@@ -1411,7 +1929,7 @@ plotLines:[{
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">77.5k</span>
+            <span class="white-color">77.8k</span>
             
 
             <br>

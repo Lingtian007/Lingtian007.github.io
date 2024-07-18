@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://lingtian007.github.io/"/>
-  <updated>2024-07-17T08:47:53.721Z</updated>
+  <updated>2024-07-18T08:15:16.013Z</updated>
   <id>https://lingtian007.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>通过 n 模块管理 node 版本</title>
+    <title>MAC常用指令汇总</title>
     <link href="https://lingtian007.github.io/2024/01/17/mac-chang-yong-zhi-ling-hui-zong/"/>
     <id>https://lingtian007.github.io/2024/01/17/mac-chang-yong-zhi-ling-hui-zong/</id>
     <published>2024-01-17T07:32:09.000Z</published>
-    <updated>2024-07-17T08:47:53.721Z</updated>
+    <updated>2024-07-18T08:15:16.013Z</updated>
     
     <summary type="html">
     
@@ -98,6 +98,113 @@
   </entry>
   
   <entry>
+    <title>MAC 真机调试</title>
+    <link href="https://lingtian007.github.io/2023/01/23/mac-zhen-ji-diao-shi/"/>
+    <id>https://lingtian007.github.io/2023/01/23/mac-zhen-ji-diao-shi/</id>
+    <published>2023-01-23T07:32:09.000Z</published>
+    <updated>2024-07-18T08:25:02.957Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="方法" scheme="https://lingtian007.github.io/categories/%E6%96%B9%E6%B3%95/"/>
+    
+    
+      <category term="方法" scheme="https://lingtian007.github.io/tags/%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>移动端常见问题汇总</title>
+    <link href="https://lingtian007.github.io/2021/11/22/yi-dong-duan-chang-jian-wen-ti-hui-zong/"/>
+    <id>https://lingtian007.github.io/2021/11/22/yi-dong-duan-chang-jian-wen-ti-hui-zong/</id>
+    <published>2021-11-22T07:32:09.000Z</published>
+    <updated>2024-07-18T08:11:22.753Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="方法" scheme="https://lingtian007.github.io/categories/%E6%96%B9%E6%B3%95/"/>
+    
+    
+      <category term="方法" scheme="https://lingtian007.github.io/tags/%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>highCharts图表使用总结</title>
+    <link href="https://lingtian007.github.io/2021/09/17/highcharts-tu-biao-shi-yong-zong-jie/"/>
+    <id>https://lingtian007.github.io/2021/09/17/highcharts-tu-biao-shi-yong-zong-jie/</id>
+    <published>2021-09-17T04:32:09.000Z</published>
+    <updated>2024-07-18T08:14:19.888Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="方法" scheme="https://lingtian007.github.io/categories/%E6%96%B9%E6%B3%95/"/>
+    
+    
+      <category term="方法" scheme="https://lingtian007.github.io/tags/%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Echars中常用方法</title>
+    <link href="https://lingtian007.github.io/2021/07/22/echars-zhong-chang-yong-fang-fa/"/>
+    <id>https://lingtian007.github.io/2021/07/22/echars-zhong-chang-yong-fang-fa/</id>
+    <published>2021-07-22T04:32:09.000Z</published>
+    <updated>2024-07-18T08:14:07.538Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="https://lingtian007.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="技术" scheme="https://lingtian007.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
     <title>项目配置proxy代理</title>
     <link href="https://lingtian007.github.io/2021/06/30/xiang-mu-pei-zhi-proxy-dai-li/"/>
     <id>https://lingtian007.github.io/2021/06/30/xiang-mu-pei-zhi-proxy-dai-li/</id>
@@ -148,60 +255,6 @@
     
     
       <category term="方法" scheme="https://lingtian007.github.io/tags/%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常见面试题集合</title>
-    <link href="https://lingtian007.github.io/2021/04/30/chang-jian-mian-shi-ti-ji-he/"/>
-    <id>https://lingtian007.github.io/2021/04/30/chang-jian-mian-shi-ti-ji-he/</id>
-    <published>2021-04-30T07:32:09.000Z</published>
-    <updated>2024-07-18T08:06:14.335Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="https://lingtian007.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="面试" scheme="https://lingtian007.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>常见面试题总结react篇</title>
-    <link href="https://lingtian007.github.io/2021/03/30/chang-jian-mian-shi-ti-zong-jie-react-pian/"/>
-    <id>https://lingtian007.github.io/2021/03/30/chang-jian-mian-shi-ti-zong-jie-react-pian/</id>
-    <published>2021-03-30T09:32:09.000Z</published>
-    <updated>2024-07-18T07:56:09.203Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="面试" scheme="https://lingtian007.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
-    
-    
-      <category term="面试" scheme="https://lingtian007.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
     
   </entry>
   
@@ -341,6 +394,33 @@
   </entry>
   
   <entry>
+    <title>常见面试题总结react篇</title>
+    <link href="https://lingtian007.github.io/2021/01/11/chang-jian-mian-shi-ti-zong-jie-react-pian/"/>
+    <id>https://lingtian007.github.io/2021/01/11/chang-jian-mian-shi-ti-zong-jie-react-pian/</id>
+    <published>2021-01-11T09:32:09.000Z</published>
+    <updated>2024-07-18T08:13:10.985Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;div align=&quot;middle&quot;&gt;
+&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
+        
+      
+    
+    </summary>
+    
+      <category term="面试" scheme="https://lingtian007.github.io/categories/%E9%9D%A2%E8%AF%95/"/>
+    
+    
+      <category term="面试" scheme="https://lingtian007.github.io/tags/%E9%9D%A2%E8%AF%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>写在2020的尾声</title>
     <link href="https://lingtian007.github.io/2020/12/16/xie-zai-2020-de-wei-sheng/"/>
     <id>https://lingtian007.github.io/2020/12/16/xie-zai-2020-de-wei-sheng/</id>
@@ -364,32 +444,6 @@
     
     
       <category term="年度总结" scheme="https://lingtian007.github.io/tags/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>移动端常见问题汇总</title>
-    <link href="https://lingtian007.github.io/2020/11/22/yi-dong-duan-chang-jian-wen-ti-hui-zong/"/>
-    <id>https://lingtian007.github.io/2020/11/22/yi-dong-duan-chang-jian-wen-ti-hui-zong/</id>
-    <published>2020-11-22T07:32:09.000Z</published>
-    <updated>2024-03-20T06:48:05.444Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="方法" scheme="https://lingtian007.github.io/categories/%E6%96%B9%E6%B3%95/"/>
-    
-    
-      <category term="方法" scheme="https://lingtian007.github.io/tags/%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   
@@ -475,33 +529,6 @@
   </entry>
   
   <entry>
-    <title>highCharts图表使用总结</title>
-    <link href="https://lingtian007.github.io/2020/09/17/highcharts-tu-biao-shi-yong-zong-jie/"/>
-    <id>https://lingtian007.github.io/2020/09/17/highcharts-tu-biao-shi-yong-zong-jie/</id>
-    <published>2020-09-17T04:32:09.000Z</published>
-    <updated>2024-03-20T06:48:05.429Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="方法" scheme="https://lingtian007.github.io/categories/%E6%96%B9%E6%B3%95/"/>
-    
-    
-      <category term="方法" scheme="https://lingtian007.github.io/tags/%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>基于jQuery带数据的日历插件</title>
     <link href="https://lingtian007.github.io/2020/09/01/ji-yu-jquery-dai-shu-ju-de-ri-li-cha-jian/"/>
     <id>https://lingtian007.github.io/2020/09/01/ji-yu-jquery-dai-shu-ju-de-ri-li-cha-jian/</id>
@@ -525,33 +552,6 @@
     
     
       <category term="插件" scheme="https://lingtian007.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>那些提效-创意的 vscode 插件</title>
-    <link href="https://lingtian007.github.io/2020/08/22/na-xie-ti-xiao-chuang-yi-de-vscode-cha-jian/"/>
-    <id>https://lingtian007.github.io/2020/08/22/na-xie-ti-xiao-chuang-yi-de-vscode-cha-jian/</id>
-    <published>2020-08-22T04:32:09.000Z</published>
-    <updated>2024-03-20T06:48:05.444Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;div align=&quot;middle&quot;&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;330&quot; height=&quot;86&quot;
-        
-      
-    
-    </summary>
-    
-      <category term="vscode 插件" scheme="https://lingtian007.github.io/categories/vscode-%E6%8F%92%E4%BB%B6/"/>
-    
-    
-      <category term="vscode 插件" scheme="https://lingtian007.github.io/tags/vscode-%E6%8F%92%E4%BB%B6/"/>
     
   </entry>
   
