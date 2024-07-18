@@ -12,7 +12,7 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="自定义脚手架-cli, 唐宇的博客">
+    <meta name="keywords" content="常见面试题总结react篇, 唐宇的博客">
     <meta name="baidu-site-verification" content>
     <meta name="google-site-verification" content>
     <meta name="360-site-verification" content>
@@ -20,12 +20,13 @@
 
 
 
-写在前面：2021年已经过去一半了，时间真的过的稍微有点快呀～ ……
-开篇
+闲来无事，随便写写 ……
+面试总结前言
+总结一下面试遇到的问题，为了方便自己查阅，也希望对小伙伴们有所帮助！
 
-搭建自己的一个cli，首先是要知道自己想要实现什么功能，然后在确定交互形式，简言之就是先实现思路，再进行搭建
-
-1.准备工作// commander:解析">
+一、执行顺序
+二、生命周期钩子函数
+React 的生命周期从广义上分为三个阶段：挂载、渲染、卸载因此可以把 React ">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -33,7 +34,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>自定义脚手架-cli | 唐宇的博客</title>
+    <title>常见面试题总结react篇 | 唐宇的博客</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -307,13 +308,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/24.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        自定义脚手架-cli
+                        常见面试题总结react篇
                     </div>
                 </div>
             </div>
@@ -424,8 +425,8 @@
                     
                     <div class="article-tag">
                         
-                        <a href="/tags/方法/" target="_blank">
-                            <span class="chip bg-color">方法</span>
+                        <a href="/tags/面试/" target="_blank">
+                            <span class="chip bg-color">面试</span>
                         </a>
                         
                     </div>
@@ -436,8 +437,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                        <a href="/categories/方法/" class="post-category" target="_blank">
-                            方法
+                        <a href="/categories/面试/" class="post-category" target="_blank">
+                            面试
                         </a>
                         
                     </div>
@@ -448,7 +449,7 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-05-22
+                    2021-03-30
                 </div>
 
                 <div class="post-author info-break-policy">
@@ -462,14 +463,14 @@
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    600
+                    1.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    5 分
                 </div>
                 
                 
@@ -486,150 +487,238 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <div align="middle">
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=407679465&auto=1&height=66"></iframe>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="//music.163.com/outchain/player?type=2&id=525278524&auto=1&height=66"></iframe>
 </div>
 
-<p>写在前面：2021年已经过去一半了，时间真的过的稍微有点快呀～ ……</p>
-<h1 id="开篇"><a href="#开篇" class="headerlink" title="开篇"></a>开篇</h1><hr>
-<blockquote>
-<p>搭建自己的一个cli，首先是要知道自己想要实现什么功能，然后在确定交互形式，简言之就是先实现思路，再进行搭建</p>
+<p>闲来无事，随便写写 ……</p>
+<h1 id="面试总结"><a href="#面试总结" class="headerlink" title="面试总结"></a>面试总结</h1><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><blockquote>
+<p>总结一下面试遇到的问题，为了方便自己查阅，也希望对小伙伴们有所帮助！</p>
 </blockquote>
-<h2 id="1-准备工作"><a href="#1-准备工作" class="headerlink" title="1.准备工作"></a>1.准备工作</h2><pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// commander:解析用户输入的命令</span>
-<span class="token keyword">const</span> program <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'commander'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 提供给我们单选/多选项目</span>
-<span class="token keyword">const</span> inquirer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'inquirer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 函数的跨平台写法</span>
-<span class="token keyword">const</span> spwn <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"cross-spawn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="2-配置package-json"><a href="#2-配置package-json" class="headerlink" title="2. 配置package.json"></a>2. 配置package.json</h2><pre class="line-numbers language-js"><code class="language-js"><span class="token string">"scripts"</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
-    <span class="token string">"cli"</span><span class="token punctuation">:</span><span class="token string">"node cli.js"</span><span class="token punctuation">,</span> <span class="token comment" spellcheck="true">// 启动指令</span>
-    <span class="token operator">...</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-    <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="3-创建文件cli-js"><a href="#3-创建文件cli-js" class="headerlink" title="3. 创建文件cli.js"></a>3. 创建文件cli.js</h2><p>们的可执行文件放置在bin的目录的cli文件中，<br>此时我们要配置当前脚手架的执行环境，因此需要在cli文件的头部添加上</p>
-<pre class="line-numbers language-js"><code class="language-js">#<span class="token operator">!</span><span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>env node<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<blockquote>
-<p>该信息必须在头部，不能在其顶部添加任何其他的信息，否则会导致报错，</p>
+<h3 id="一、执行顺序"><a href="#一、执行顺序" class="headerlink" title="一、执行顺序"></a>一、执行顺序</h3><p><img src="sx.jpg" alt></p>
+<h3 id="二、生命周期钩子函数"><a href="#二、生命周期钩子函数" class="headerlink" title="二、生命周期钩子函数"></a>二、生命周期钩子函数</h3><blockquote>
+<p>React 的生命周期从广义上分为三个阶段：挂载、渲染、卸载<br>因此可以把 React 的生命周期分为两类：挂载卸载过程和更新过程</p>
 </blockquote>
-<pre class="line-numbers language-js"><code class="language-js">#<span class="token operator">!</span> <span class="token operator">/</span>usr<span class="token operator">/</span>bin<span class="token operator">/</span>env node
+<h4 id="1-1、旧版钩子函数【淘汰】"><a href="#1-1、旧版钩子函数【淘汰】" class="headerlink" title="1.1、旧版钩子函数【淘汰】"></a>1.1、旧版钩子函数【淘汰】</h4><ul>
+<li>16.3 之前的版本生命周期图示：</li>
+</ul>
+<p><img src="old.jpg" alt></p>
+<ul>
+<li>旧版本独有的，17.0 版本已经删除了的钩子函数(17.0 之前的版本仍可以继续使用)：</li>
+<li>componentWillMount，componentWillReceiveProps，componentWillUpdate</li>
+<li>在使用这几个钩子函数时，前面要加 UNSAFE_</li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">"react-dom"</span><span class="token punctuation">;</span>
+<span class="token comment" spellcheck="true">// 子组件</span>
+<span class="token keyword">class</span> <span class="token class-name">Child</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">// 初始化数据</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 当组件接收到新的props值会触发，新版已经淘汰</span>
+  <span class="token function">UNSAFE_componentWillReceiveProps</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"componentWillReceiveProps 运行了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span>子节点：<span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>props<span class="token punctuation">.</span>num<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"constructor 运行了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span> num<span class="token punctuation">:</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 组件挂载前，新版已经淘汰了</span>
+  <span class="token function">UNSAFE_componentWillMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"componentWillMount 运行了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 箭头函数</span>
+  changeNum <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> num<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>num <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// 渲染数据</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"render 运行了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        根节点
+        <span class="token operator">&lt;</span>br <span class="token operator">/</span><span class="token operator">></span>
+        <span class="token punctuation">{</span><span class="token comment" spellcheck="true">/* &lt;br>必须加/&lt;br/> */</span><span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>changeNum<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">++</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+        <span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>num<span class="token punctuation">}</span>
+        <span class="token operator">&lt;</span>br <span class="token operator">/</span><span class="token operator">></span>
+        子组件：
+        <span class="token operator">&lt;</span>Child num<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>num<span class="token punctuation">}</span> <span class="token operator">/</span><span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 组件更新前，新版已经淘汰了</span>
+  <span class="token function">UNSAFE_componentWillUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"componentWillUpdate 运行了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="1-2、新版钩子函数【新增】"><a href="#1-2、新版钩子函数【新增】" class="headerlink" title="1.2、新版钩子函数【新增】"></a>1.2、新版钩子函数【新增】</h4><p><img src="new.png" alt></p>
+<ul>
+<li>增加了：static getDerivedStateFromProps()和 getSnapshotBeforeUpdate()</li>
+<li>用来替代被弃用的旧版本那三个钩子函数</li>
+<li>还增加了：static getDerivedStateFromError()和 componentDidCatch() - 用来处理错误</li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">import</span> ReactDOM <span class="token keyword">from</span> <span class="token string">"react-dom"</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"constructor 运行了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span>
+      count<span class="token punctuation">:</span> <span class="token number">0</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 一般用不到：通过props设置获取到 state的值</span>
+  <span class="token comment" spellcheck="true">// getDerivedStateFromProps前面要加上static保留字，声明为静态方法，不然会被react忽略掉</span>
+  <span class="token comment" spellcheck="true">// getDerivedStateFromProps里面的this为undefined</span>
+  <span class="token keyword">static</span> <span class="token function">getDerivedStateFromProps</span><span class="token punctuation">(</span>nextProps<span class="token punctuation">,</span> prevState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"getDerivedStateFromProps 运行了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 一般用不到：滚动的特殊处理，与componentDidUpdate 配对使用的</span>
+  <span class="token comment" spellcheck="true">/*  在react `render()`后的输出被渲染到DOM之前被调用。
+       它使您的组件能够在它们被潜在更改之前捕获当前值（如滚动位置）。
+       这个生命周期返回的任何值都将作为参数传递给componentDidUpdate（）*/</span>
+  <span class="token function">getSnapshotBeforeUpdate</span><span class="token punctuation">(</span>prevProps<span class="token punctuation">,</span> prevState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"getSnapshotBeforeUpdate 运行了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">11</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token function">componentDidUpdate</span><span class="token punctuation">(</span>prevProps<span class="token punctuation">,</span> prevState<span class="token punctuation">,</span> snapState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"componentDidUpdate 运行了"</span><span class="token punctuation">,</span> snapState<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 本身或后代有报错会触发</span>
+  <span class="token function">componentDidCatch</span><span class="token punctuation">(</span>error<span class="token punctuation">,</span> info<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"componentDidCatch 运行了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 后代组件抛出错误后会触发</span>
+  <span class="token keyword">static</span> <span class="token function">getDerivedStateFromError</span><span class="token punctuation">(</span>nextProps<span class="token punctuation">,</span> prevState<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"getDerivedStateFromError 运行了"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 定义事件</span>
+  changeCount <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">setState</span><span class="token punctuation">(</span><span class="token punctuation">{</span> count<span class="token punctuation">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">.</span>count <span class="token operator">+</span> <span class="token number">1</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// 渲染数据</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">const</span> <span class="token punctuation">{</span> count <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword">this</span><span class="token punctuation">.</span>state<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token punctuation">(</span>
+      <span class="token operator">&lt;</span>div<span class="token operator">></span>
+        <span class="token operator">&lt;</span>button onClick<span class="token operator">=</span><span class="token punctuation">{</span><span class="token keyword">this</span><span class="token punctuation">.</span>changeCount<span class="token punctuation">}</span><span class="token operator">></span><span class="token operator">++</span> <span class="token punctuation">{</span>count<span class="token punctuation">}</span><span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">></span>
+      <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span><span class="token operator">&lt;</span>App <span class="token operator">/</span><span class="token operator">></span><span class="token punctuation">,</span> document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">"root"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="1-3、常用的钩子函数"><a href="#1-3、常用的钩子函数" class="headerlink" title="1.3、常用的钩子函数"></a>1.3、常用的钩子函数</h4><pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">import</span> React<span class="token punctuation">,</span> <span class="token punctuation">{</span> Component <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"react"</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">App</span> <span class="token keyword">extends</span> <span class="token class-name">Component</span> <span class="token punctuation">{</span>
+  <span class="token comment" spellcheck="true">//初始化  ，state  ，props，ref，绑定this</span>
+  <span class="token function">constructor</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">super</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>state <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">//渲染  ，父组件 执行了渲染，默认子组件的渲染函数也要执行</span>
+  <span class="token function">render</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token operator">&lt;</span>div<span class="token operator">></span>首页<span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">></span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-<span class="token keyword">const</span> program <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'commander'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> spwn <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"cross-spawn"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> inquirer <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'inquirer'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> fs <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">'fs'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> path <span class="token operator">=</span> <span class="token function">require</span><span class="token punctuation">(</span><span class="token string">"path"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">//是否需要更新  ，不需要 返回 false   ；需要 返回true</span>
+  <span class="token function">shouldComponentUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 
-<span class="token comment" spellcheck="true">//去除环境,启动端描述和空格</span>
-<span class="token keyword">const</span> toFilter<span class="token operator">=</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-   <span class="token keyword">let</span> valStr<span class="token operator">=</span>val<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">'-'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-   <span class="token keyword">let</span> RemoveSpace<span class="token operator">=</span>valStr<span class="token punctuation">.</span><span class="token function">replace</span><span class="token punctuation">(</span><span class="token regex">/(\s*$)/g</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-   <span class="token keyword">return</span> RemoveSpace<span class="token punctuation">;</span>
+  <span class="token comment" spellcheck="true">// DOM操作，实例化，数据请求</span>
+  <span class="token comment" spellcheck="true">//异步处理，有副作用的处理  ；获取数据、执行 setTimeout  setInterval</span>
+  <span class="token function">componentDidMount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"componentDidMount"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">//更新时的钩子函数</span>
+  <span class="token function">componentDidUpdate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"componentDidUpdate"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token comment" spellcheck="true">//卸载 回收操作  定时器  解除绑定</span>
+  <span class="token function">componentWillUnmount</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 类似于vue 的beforeDestory</span>
+    console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span><span class="token string">"componentDidUpdate"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
 <span class="token punctuation">}</span>
 
-<span class="token comment" spellcheck="true">// 业务开发目录</span>
-<span class="token keyword">const</span> businessFilesPath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span>__dirname <span class="token operator">+</span> <span class="token string">"/src/pages"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">// 获取业务文件名</span>
-<span class="token keyword">const</span> businessFilesNames <span class="token operator">=</span> fs<span class="token punctuation">.</span><span class="token function">readdirSync</span><span class="token punctuation">(</span>businessFilesPath<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token keyword">const</span> Run<span class="token operator">=</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">{</span>
-    <span class="token keyword">const</span> promptList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
-        type<span class="token punctuation">:</span> <span class="token string">'list'</span><span class="token punctuation">,</span>
-        message<span class="token punctuation">:</span> <span class="token string">'请选择运行环境:'</span><span class="token punctuation">,</span>
-        name<span class="token punctuation">:</span> <span class="token string">'env'</span><span class="token punctuation">,</span>
-        choices<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-          <span class="token string">"mock - 本地开发环境"</span><span class="token punctuation">,</span>
-          <span class="token string">"dev - 联调环境"</span><span class="token punctuation">,</span>
-          <span class="token string">"sit - 测试环境"</span><span class="token punctuation">,</span>
-          <span class="token string">"uat - 仿真环境"</span><span class="token punctuation">,</span>
-          <span class="token string">"build - 生产环境"</span>
-        <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        filter<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 去除文字描述</span>
-          <span class="token keyword">return</span> <span class="token function">toFilter</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
-        type<span class="token punctuation">:</span> <span class="token string">'list'</span><span class="token punctuation">,</span>
-        message<span class="token punctuation">:</span> <span class="token string">'请选择启动端:'</span><span class="token punctuation">,</span>
-        name<span class="token punctuation">:</span> <span class="token string">'tool'</span><span class="token punctuation">,</span>
-        choices<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-          <span class="token string">"h5 - webapp"</span><span class="token punctuation">,</span>
-          <span class="token string">"weapp - 微信小程序"</span><span class="token punctuation">,</span>
-          <span class="token string">"alipay - 支付宝小程序"</span><span class="token punctuation">,</span>
-          <span class="token string">"swan - 百度小程序"</span><span class="token punctuation">,</span>
-          <span class="token string">"tt - 字节跳动小程序"</span><span class="token punctuation">,</span>
-          <span class="token string">"qq - QQ小程序"</span>
-        <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        filter<span class="token punctuation">:</span> <span class="token keyword">function</span> <span class="token punctuation">(</span>val<span class="token punctuation">)</span> <span class="token punctuation">{</span> <span class="token comment" spellcheck="true">// 去除文字描述</span>
-          <span class="token keyword">return</span> <span class="token function">toFilter</span><span class="token punctuation">(</span>val<span class="token punctuation">)</span><span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span><span class="token punctuation">{</span>
-        type<span class="token punctuation">:</span> <span class="token string">'list'</span><span class="token punctuation">,</span>
-        message<span class="token punctuation">:</span> <span class="token string">'是否打包:'</span><span class="token punctuation">,</span>
-        name<span class="token punctuation">:</span> <span class="token string">'IsDist'</span><span class="token punctuation">,</span>
-        choices<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-          <span class="token string">"Yes"</span><span class="token punctuation">,</span>
-          <span class="token string">"No"</span><span class="token punctuation">,</span>
-        <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        when<span class="token punctuation">:</span><span class="token keyword">function</span><span class="token punctuation">(</span>answers<span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">const</span> <span class="token punctuation">{</span>env<span class="token punctuation">,</span>tool<span class="token punctuation">}</span><span class="token operator">=</span>answers<span class="token punctuation">;</span>
-            <span class="token keyword">let</span> envList<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'sit'</span><span class="token punctuation">,</span><span class="token string">'uat'</span><span class="token punctuation">,</span><span class="token string">'build'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>envList<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>env<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                <span class="token keyword">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-                <span class="token keyword">return</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">{</span>
-        type<span class="token punctuation">:</span> <span class="token string">'list'</span><span class="token punctuation">,</span>
-        message<span class="token punctuation">:</span> <span class="token string">'请选择模块:'</span><span class="token punctuation">,</span>
-        name<span class="token punctuation">:</span> <span class="token string">'module'</span><span class="token punctuation">,</span>
-        choices<span class="token punctuation">:</span>businessFilesNames<span class="token punctuation">,</span>
-      <span class="token punctuation">}</span><span class="token punctuation">,</span>
-        <span class="token punctuation">{</span>
-          type<span class="token punctuation">:</span> <span class="token string">'list'</span><span class="token punctuation">,</span>
-          message<span class="token punctuation">:</span> <span class="token string">'PWA是否启用:'</span><span class="token punctuation">,</span>
-          name<span class="token punctuation">:</span> <span class="token string">'PWA'</span><span class="token punctuation">,</span>
-          choices<span class="token punctuation">:</span> <span class="token punctuation">[</span>
-            <span class="token string">"true"</span><span class="token punctuation">,</span>
-            <span class="token string">"false"</span>
-          <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token punctuation">}</span><span class="token punctuation">,</span>
-      <span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">export</span> <span class="token keyword">default</span> App<span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="三、生命周期各阶段"><a href="#三、生命周期各阶段" class="headerlink" title="三、生命周期各阶段"></a>三、生命周期各阶段</h3><blockquote>
+<p>React 中组件也有生命周期，也就是说也有很多钩子函数供我们使用, 组件的生命周期，我们会分为四个阶段，初始化（挂载）、运行中（更新）、销毁（卸载）、错误处理（异常）(16.3 之后)</p>
+</blockquote>
+<blockquote>
+<p>常用的生命周期方法就下面几个，为啥？因为好记，好记才会常用。程序员的本性。<br>其实其他生命周期方法也好用，但是需要特地条件下使用才会觉得方便。所以就不太常用</p>
+</blockquote>
+<ul>
+<li>常用</li>
+</ul>
+<ul>
+<li>constructor()</li>
+<li>render()</li>
+<li>componentDidMount()</li>
+<li>componentDidUpdate()</li>
+<li>componentWillUnmount()</li>
+<li>getDerivedStateFromProps</li>
+</ul>
+<h4 id="2-1、挂载阶段"><a href="#2-1、挂载阶段" class="headerlink" title="2.1、挂载阶段"></a>2.1、挂载阶段</h4><ul>
+<li>当组件实例被创建并插入 DOM 中时，其生命周期调用顺序如下：</li>
+</ul>
+<ul>
+<li>constructor</li>
+<li>static getDerivedStateFromProps</li>
+<li>render</li>
+<li>componentDidMount</li>
+</ul>
+<h4 id="2-2、更新阶段"><a href="#2-2、更新阶段" class="headerlink" title="2.2、更新阶段"></a>2.2、更新阶段</h4><ul>
+<li>当组件的 props 或 state 发生变化时会触发更新。组件更新的生命周期调用顺序如下：</li>
+</ul>
+<ul>
+<li>static getDerivedStateFromProps</li>
+<li>shouldComponentUpdate</li>
+<li>render</li>
+<li>getSnapshotBeforeUpdate</li>
+<li>componentDidUpdate</li>
+</ul>
+<h4 id="2-3、卸载阶段"><a href="#2-3、卸载阶段" class="headerlink" title="2.3、卸载阶段"></a>2.3、卸载阶段</h4><ul>
+<li>当组件从 DOM 中移除时会调用如下方法：</li>
+</ul>
+<ul>
+<li>componentWillUnmount【!】</li>
+<li>componentWillUnmount()</li>
+<li>调用：在组件卸载之前</li>
+<li>作用：执行一些清理工作<blockquote>
+<p>例如：<br>清除组件中使用的定时器，<br>取消网络请求或清理在 componentDidMount 中创建的任何监听<br>清除 componentDidMount 中手动创建的 DOM 元素</p>
+</blockquote>
+</li>
+</ul>
+<h4 id="2-4、错误处理"><a href="#2-4、错误处理" class="headerlink" title="2.4、错误处理"></a>2.4、错误处理</h4><ul>
+<li>当渲染过程，生命周期，或子组件的构造函数中抛出错误时，会调用如下方法：</li>
+</ul>
+<ul>
+<li>componentDidCatch</li>
+<li>componentDidCatch(error, info)</li>
+<li>此生命周期在后代组件抛出错误后被调用。</li>
+<li>error —— 抛出的错误。</li>
+<li>info —— 带有 componentStack key 的对象</li>
+<li>componentDidCatch() 会在“提交”阶段被调用，因此允许执行副作用。</li>
+<li>它应该用于记录错误之类的情况</li>
+<li>static getDerivedStateFromError</li>
+<li>static getDerivedStateFromError(error)</li>
+<li>此生命周期会在后代组件抛出错误后被调用</li>
+<li>它将抛出的错误作为参数，并返回一个值以更新 state</li>
+</ul>
+<h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>未完待续,持续更新中……</p>
 
-      inquirer<span class="token punctuation">.</span><span class="token function">prompt</span><span class="token punctuation">(</span>promptList<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span>answers <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-        <span class="token keyword">const</span><span class="token punctuation">{</span> env<span class="token punctuation">,</span> tool<span class="token punctuation">,</span> module<span class="token punctuation">,</span> PWA<span class="token punctuation">,</span>IsDist <span class="token punctuation">}</span> <span class="token operator">=</span> answers<span class="token punctuation">;</span>
-        <span class="token comment" spellcheck="true">// console.log(IsDist);</span>
-        <span class="token keyword">let</span> envList<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">'sit'</span><span class="token punctuation">,</span><span class="token string">'uat'</span><span class="token punctuation">,</span><span class="token string">'build'</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
-        <span class="token keyword">let</span> watch<span class="token operator">=</span><span class="token string">''</span><span class="token punctuation">;</span>
-        <span class="token keyword">if</span><span class="token punctuation">(</span>envList<span class="token punctuation">.</span><span class="token function">indexOf</span><span class="token punctuation">(</span>env<span class="token punctuation">)</span> <span class="token operator">!=</span> <span class="token operator">-</span><span class="token number">1</span> <span class="token operator">&amp;&amp;</span> tool <span class="token operator">===</span> <span class="token string">'h5'</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-            <span class="token keyword">if</span><span class="token punctuation">(</span>IsDist <span class="token operator">&amp;&amp;</span> IsDist<span class="token operator">===</span><span class="token string">"Yes"</span><span class="token punctuation">)</span><span class="token punctuation">{</span>
-                watch<span class="token operator">=</span><span class="token string">""</span>
-            <span class="token punctuation">}</span><span class="token keyword">else</span><span class="token punctuation">{</span>
-                watch<span class="token operator">=</span><span class="token string">":watch"</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">}</span>
-        <span class="token comment" spellcheck="true">// const watch = (envList.indexOf(env) != -1 &amp;&amp; tool === 'h5') || IsDist==='N' ? ':watch' : '';</span>
-        <span class="token keyword">let</span>  order<span class="token operator">=</span> <span class="token template-string"><span class="token string">`npm run </span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>env<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>tool<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>watch<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string"> APP_CONFIG=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>module<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">H5 PWA_ENABLE=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>PWA<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span>
-        console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>order<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// 返回的结果</span>
-        <span class="token function">spwn</span><span class="token punctuation">(</span><span class="token string">"npm"</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>
-          <span class="token string">"run"</span><span class="token punctuation">,</span>
-          <span class="token template-string"><span class="token string">`</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>env<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">:</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>tool<span class="token interpolation-punctuation punctuation">}</span></span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>watch<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span>
-          <span class="token template-string"><span class="token string">`APP_CONFIG=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>module<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">H5`</span></span><span class="token punctuation">,</span>
-          <span class="token template-string"><span class="token string">`PWA_ENABLE=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>PWA<span class="token interpolation-punctuation punctuation">}</span></span><span class="token string">`</span></span><span class="token punctuation">,</span>
-        <span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">{</span>stdio<span class="token punctuation">:</span><span class="token punctuation">[</span><span class="token string">"pipe"</span><span class="token punctuation">,</span>process<span class="token punctuation">.</span>stdout<span class="token punctuation">,</span>process<span class="token punctuation">.</span>stderr<span class="token punctuation">]</span><span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span><span class="token punctuation">)</span>
-
-<span class="token punctuation">}</span>
-program
-  <span class="token punctuation">.</span><span class="token function">action</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
-    <span class="token function">Run</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-
-<span class="token comment" spellcheck="true">// 用来解析终端输入的 options</span>
-program<span class="token punctuation">.</span><span class="token function">parse</span><span class="token punctuation">(</span>process<span class="token punctuation">.</span>argv<span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="3-使用"><a href="#3-使用" class="headerlink" title="3. 使用"></a>3. 使用</h2><pre class="line-numbers language-js"><code class="language-js"> npm run cli<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1>
             </div>
             <hr />
 
@@ -787,9 +876,9 @@ program<span class="token punctuation">.</span><span class="token function">pars
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《自定义脚手架-cli》
+                    《常见面试题总结react篇》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/05/22/zi-ding-yi-jiao-shou-jia/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2021/03/30/chang-jian-mian-shi-ti-zong-jie-react-pian/" property="cc:attributionName"
                rel="cc:attributionURL">
                 唐宇
             </a> 采用
@@ -830,7 +919,7 @@ program<span class="token punctuation">.</span><span class="token function">pars
         repo: 'Lingtian007.github.io',
         owner: 'Lingtian007',
         admin: "Lingtian007",
-        id: '2021/05/22/zi-ding-yi-jiao-shou-jia/',
+        id: '2021/03/30/chang-jian-mian-shi-ti-zong-jie-react-pian/',
         distractionFreeMode: false  // Facebook-like distraction free mode
     });
 
@@ -1117,13 +1206,13 @@ program<span class="token punctuation">.</span><span class="token function">pars
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2021/06/22/yi-jian-sheng-cheng-xiang-mu-mo-ban/">
+                <a href="/2021/04/30/chang-jian-mian-shi-ti-ji-he/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/27.jpg" class="responsive-img" alt="一键生成项目模板">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="常见面试题集合">
                         
-                        <span class="card-title">一键生成项目模板</span>
+                        <span class="card-title">常见面试题集合</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1134,14 +1223,14 @@ program<span class="token punctuation">.</span><span class="token function">pars
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-06-22
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2021-04-30
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/脚本/" class="post-category" target="_blank">
-                                    脚本
+                            <a href="/categories/面试/" class="post-category" target="_blank">
+                                    面试
                                 </a>
                             
                             
@@ -1151,8 +1240,8 @@ program<span class="token punctuation">.</span><span class="token function">pars
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/脚本/" target="_blank">
-                        <span class="chip bg-color">脚本</span>
+                    <a href="/tags/面试/" target="_blank">
+                        <span class="chip bg-color">面试</span>
                     </a>
                     
                 </div>
@@ -1166,13 +1255,13 @@ program<span class="token punctuation">.</span><span class="token function">pars
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/05/13/xiao-cheng-xu-he-h5-ye-mian-zhi-jian-hu-xiang-tiao-zhuan/">
+                <a href="/2021/02/24/qian-duan-xiang-mu-you-hua-fang-an/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/26.jpg" class="responsive-img" alt="小程序和H5页面之间互相跳转">
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="前端项目优化方案">
                         
-                        <span class="card-title">小程序和H5页面之间互相跳转</span>
+                        <span class="card-title">前端项目优化方案</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1183,14 +1272,14 @@ program<span class="token punctuation">.</span><span class="token function">pars
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-05-13
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2021-02-24
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/方法/" class="post-category" target="_blank">
-                                    方法
+                            <a href="/categories/方案/" class="post-category" target="_blank">
+                                    方案
                                 </a>
                             
                             
@@ -1200,8 +1289,8 @@ program<span class="token punctuation">.</span><span class="token function">pars
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/方法/" target="_blank">
-                        <span class="chip bg-color">方法</span>
+                    <a href="/tags/方案/" target="_blank">
+                        <span class="chip bg-color">方案</span>
                     </a>
                     
                 </div>
@@ -1356,7 +1445,7 @@ program<span class="token punctuation">.</span><span class="token function">pars
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">72.1k</span>
+            <span class="white-color">77.5k</span>
             
 
             <br>
