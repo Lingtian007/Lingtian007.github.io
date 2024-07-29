@@ -310,7 +310,7 @@ HTML 语义化就是让页面内容结构化，它有如下优点
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
@@ -465,14 +465,14 @@ HTML 语义化就是让页面内容结构化，它有如下优点
                 
                 <div class="info-break-policy">
                     <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    19k
+                    22.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    70 分
+                    82 分
                 </div>
                 
                 
@@ -593,36 +593,43 @@ display: -webkit-box;
 <blockquote>
 <p>1、不要在同一行声明多个变量<br>2、请使用===/！==来比较 true/false 或者数值<br>3、使用对象字面量替代 new Array 这种形式<br>4、不要使用全局变量<br>5、Switch 语句必须带有 default 分支<br>6、函数不应该有时候有返回值，有时候没有返回值<br>7、For 循环必须使用大括号<br>8、IF 语句必须使用大括号<br>9、for-in 循环中的变量 应该使用 var 关键字明确限定作用域，从而避免作用域污染</p>
 </blockquote>
-<h4 id="1-JS-的基本数据类型与复杂数据类型"><a href="#1-JS-的基本数据类型与复杂数据类型" class="headerlink" title="1.JS 的基本数据类型与复杂数据类型"></a>1.JS 的基本数据类型与复杂数据类型</h4><ul>
-<li><p>基本数据类型存储在栈中，引用数据类型存储在堆中，引用地址存放在栈内，</p>
-</li>
-<li><p>将基本数据存储在栈中是因为它们占据的空间是固定的，更有利于迅速查询变量的值，</p>
-</li>
-<li><p>==&gt;为什么引用数据类型不放在栈中, :=&gt;由于引用数据类型大小不固定，如果存放在栈中会降低变量的搜索效率(栈内存主要是根据程序逻辑明确申请的内存，所以也会变相降低程序逻辑处理效率。)</p>
-</li>
-<li><p>引用数据类型大小衡量通过占用内存的大小， 在进行比较的时候比较的是引用地址。</p>
-</li>
-<li><p>基本数据类型有哪些?</p>
-</li>
+<h4 id="1-JS-的基本数据类型与复杂数据类型"><a href="#1-JS-的基本数据类型与复杂数据类型" class="headerlink" title="1.JS 的基本数据类型与复杂数据类型"></a>1.JS 的基本数据类型与复杂数据类型</h4><ol>
+<li>数据存储方式</li>
+</ol>
+<ul>
+<li>基本数据类型存储在栈中，引用数据类型存储在堆中，引用地址存放在栈内，</li>
+<li>将基本数据存储在栈中是因为它们占据的空间是固定的，更有利于迅速查询变量的值，</li>
 </ul>
+<ol start="2">
+<li>为什么引用数据类型不放在栈中<blockquote>
+<p>由于引用数据类型大小不固定，如果存放在栈中会降低变量的搜索效率(栈内存主要是根据程序逻辑明确申请的内存，所以也会变相降低程序逻辑处理效率。)</p>
+</blockquote>
+</li>
+</ol>
+<ul>
+<li>引用数据类型大小衡量通过占用内存的大小， 在进行比较的时候比较的是引用地址。</li>
+</ul>
+<ol start="3">
+<li>基本数据类型有哪些?</li>
+</ol>
 <ul>
 <li>六种 <code>number  string  boolean   undefind  null   es6新增的symbol</code> ,</li>
 </ul>
-<ul>
+<ol start="4">
 <li>复杂数据类型有哪些?</li>
-</ul>
+</ol>
 <ul>
 <li><code>object,  Array,function</code></li>
 </ul>
-<ul>
+<ol start="5">
 <li>什么是 symbol?</li>
-</ul>
+</ol>
 <blockquote>
 <p>一般问到了基本数据类型种类,你说了 symbol 的话,肯定会问 symbol, :=&gt; symbol 不能使用 new,它生成的也是原始数据类型的值, 它生成的数据都是独一无二的.(就算 symbol 里的变量值相同,那也是两个数据值. symbol.for 和 symbol 的区别在于 symbol.for 会先查找有没有这个 key 值,有则直接返回,没有才会创建.)</p>
 </blockquote>
-<blockquote>
-<p>一般问到基本数据类型,就会问检测复杂数据类型的方法</p>
-</blockquote>
+<ol start="6">
+<li>一般问到基本数据类型,就会问检测复杂数据类型的方法</li>
+</ol>
 <ul>
 <li>基本数据类型可以用 typeof 检测,对复杂数据类型都是返回 object,但是 fucntion 是特例,会返回 function.</li>
 <li>判断复杂数据类型可以用 instandof,(instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上)</li>
@@ -692,7 +699,11 @@ return B();
 <h4 id="9-实例化-new-与不-new-的区别"><a href="#9-实例化-new-与不-new-的区别" class="headerlink" title="9.实例化 new 与不 new 的区别"></a>9.实例化 new 与不 new 的区别</h4><blockquote>
 <p>简单来说，就是， new 是通过调用构造函数 Function 来创建函数 ，没有 return 会返回一个对象,不 new 只是调用函数把返回值赋值变量。 没有 return 就返回 undefind</p>
 </blockquote>
-<p>null 和 undefind 的区别 :=&gt; null 用来表示尚未存在的对象, undefind 表示还没有赋值. null 转数值为 0, undefind 转数值为 nan.</p>
+<p><strong>null 和 undefind 的区别 :</strong></p>
+<ul>
+<li>null 用来表示尚未存在的对象, undefind 表示还没有赋值.</li>
+<li>null 转数值为 0, undefind 转数值为 nan.</li>
+</ul>
 <h4 id="10-什么是-promise"><a href="#10-什么是-promise" class="headerlink" title="10.什么是 promise"></a>10.什么是 promise</h4><blockquote>
 <p>一句话概括 promise : Promise 对象用于异步操作,他表示一个尚未完成切预计在未来会完成的异步操作.</p>
 </blockquote>
@@ -724,34 +735,35 @@ return B();
 <p>简单点来说，就是假设 B 复制了 A，当修改 A 时，看 B 是否会发生变化，如果 B 也跟着变了，说明这是浅拷贝，拿人手短，如果 B 没变，那就是深拷贝，自食其力赋值。</p>
 </blockquote>
 <p>在引用类型中，只是赋值了指针， 并没有创建对象空间,而浅拷贝和深拷贝都会创建一个新对象只是说浅拷贝的对象是引用类数据的第一层引用 ，拷贝第一层级，指针依然指向引用数据，引用数据内部改变，浅拷贝对象也会发生改变。深拷贝是完全创建一个新对象，拷贝所有层级，复制内部所有结构。两者互不影响.</p>
-<ul>
-<li>怎么完成一个浅拷贝</li>
-</ul>
-<ul>
-<li>用 es6 的 spread 操作符 …obj</li>
-</ul>
-<ul>
-<li>怎么用简单的方法实现一个深拷贝</li>
-</ul>
-<ul>
-<li><p>用 json.stringify 转字符串,然后 json.parse 转对象, 但是 function 的话,在转换过程中会丢失那个 function(就是声明类型,面试的时候不要解释) .</p>
-</li>
-<li><p>递归</p>
-<pre><code> var deepCopy = (obj) =&gt; {
-     var ret = {}
-     for (var key in obj) {
-         var value = obj[key]
-         ret[key] = typeof value === &#39;object&#39; ? deepCopy(value) : value
-     }
-     return ret
- }</code></pre></li>
-<li><p>通过 jQuery 的 extend 方法实现深拷贝</p>
-</li>
-<li><p>Object.assign()拷贝</p>
-</li>
-<li><p>lodash 函数库实现深拷贝 -&gt;lodash 很热门的函数库，提供了 lodash.cloneDeep()实现深拷贝</p>
-</li>
-</ul>
+<h5 id="12-1-怎么完成一个浅拷贝"><a href="#12-1-怎么完成一个浅拷贝" class="headerlink" title="12.1 怎么完成一个浅拷贝"></a>12.1 怎么完成一个浅拷贝</h5><ol>
+<li>用 es6 的 spread 扩展运算符方式 …obj</li>
+<li>Object.assign()实现</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js">object<span class="token punctuation">.</span>assign 的语法为：Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> <span class="token operator">...</span>sources<span class="token punctuation">)</span>
+<span class="token keyword">let</span> target <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">let</span> source <span class="token operator">=</span> <span class="token punctuation">{</span> a<span class="token punctuation">:</span> <span class="token punctuation">{</span> b<span class="token punctuation">:</span> <span class="token number">1</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+Object<span class="token punctuation">.</span><span class="token function">assign</span><span class="token punctuation">(</span>target<span class="token punctuation">,</span> source<span class="token punctuation">)</span><span class="token punctuation">;</span>
+console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>target<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">// { a: { b: 1 } };</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="3">
+<li>concat 拷贝数组</li>
+<li>slice 拷贝数组</li>
+</ol>
+<h5 id="12-2-怎么用简单的方法实现一个深拷贝"><a href="#12-2-怎么用简单的方法实现一个深拷贝" class="headerlink" title="12.2 怎么用简单的方法实现一个深拷贝"></a>12.2 怎么用简单的方法实现一个深拷贝</h5><ol>
+<li>用 json.stringify 转字符串,然后 json.parse 转对象, 但是 <code>function</code> 的话,在转换过程中会丢失那个 function(就是声明类型,面试的时候不要解释).</li>
+<li>递归</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token keyword">var</span> deepCopy <span class="token operator">=</span> <span class="token punctuation">(</span>obj<span class="token punctuation">)</span> <span class="token operator">=</span><span class="token operator">></span> <span class="token punctuation">{</span>
+  <span class="token keyword">var</span> ret <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+  <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">var</span> key <span class="token keyword">in</span> obj<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">var</span> value <span class="token operator">=</span> obj<span class="token punctuation">[</span>key<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    ret<span class="token punctuation">[</span>key<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token keyword">typeof</span> value <span class="token operator">===</span> <span class="token string">"object"</span> <span class="token operator">?</span> <span class="token function">deepCopy</span><span class="token punctuation">(</span>value<span class="token punctuation">)</span> <span class="token punctuation">:</span> value<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+  <span class="token keyword">return</span> ret<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="3">
+<li>通过 jQuery 的 <code>extend</code> 方法实现深拷贝</li>
+<li>lodash 函数库实现深拷贝 -&gt;<code>lodash</code> 很热门的函数库，提供了 lodash.cloneDeep()实现深拷贝</li>
+</ol>
 <h4 id="12-es5-和-es6-的区别"><a href="#12-es5-和-es6-的区别" class="headerlink" title="12.es5 和 es6 的区别"></a>12.es5 和 es6 的区别</h4><ol>
 <li>箭头函数</li>
 <li>字符串插值 ：字符串插值允许使用`` 插入字符串 ${}可以解析变量=&gt;模板字符串。</li>
@@ -764,19 +776,36 @@ return B();
 <li>解构赋值 =&gt; 用于对对象或数组快速取值 let [] =[]，等式两边属性一一对应，找不到的为 undefind.</li>
 <li>from 可以将对象转成数组</li>
 </ol>
+<h4 id="13-如何一次性渲染十万条数据"><a href="#13-如何一次性渲染十万条数据" class="headerlink" title="13. 如何一次性渲染十万条数据"></a>13. 如何一次性渲染十万条数据</h4><blockquote>
+<p>一次性渲染十万条数据对于前端框架来说是一个挑战，因为这可能会导致性能问题，如页面卡顿、响应缓慢等。然而，有一些策略可以帮助我们更高效地处理大量数据的渲染：</p>
+</blockquote>
+<ol>
+<li><p><code>虚拟滚动（Virtual Scrolling</code>）： 虚拟滚动只渲染可视区域内的元素，当用户滚动时，动态地更新可视区域内的数据。这样可以大大减少 DOM 元素的数量，提高渲染效率。</p>
+</li>
+<li><p>分页（Pagination）： 通过 <code>setTimeout</code> 进行分页渲染。</p>
+</li>
+<li><p>触底加载 – <code>懒加载（Lazy Loading</code>）： 懒加载是一种按需加载的策略，只有当数据进入可视区域时才加载和渲染。对于列表数据，可以在滚动到列表底部时才加载更多数据。</p>
+</li>
+<li><p><code>组件</code>的合理划分： 将大列表拆分为多个小组件，这样可以更好地利用缓存和避免不必要的重新渲染。</p>
+</li>
+<li><p>使用轻量级的<code>UI</code> 组件： 选择轻量级的 UI 组件库，减少组件本身的渲染负担。</p>
+</li>
+</ol>
+<p><a href="https://blog.csdn.net/qq_43474235/article/details/126336380?spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ECtr-2-126336380-blog-137644567.235%5Ev43%5Epc_blog_bottom_relevance_base3&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7ECtr-2-126336380-blog-137644567.235%5Ev43%5Epc_blog_bottom_relevance_base3&utm_relevant_index=3" target="_blank" rel="noopener"> 如果一次性给你 10 万条数据，前端如何处理 代码实现==&gt;地址</a></p>
+<p><a href="https://blog.csdn.net/lannieZ/article/details/115304200?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-5-115304200-blog-134295646.235^v43^pc_blog_bottom_relevance_base3&spm=1001.2101.3001.4242.4&utm_relevant_index=6" target="_blank" rel="noopener">前端优化之如何做到渲染几十万条数据不卡帧</a></p>
 <h3 id="四-杂项"><a href="#四-杂项" class="headerlink" title="四 杂项"></a>四 杂项</h3><h4 id="1-数组操作"><a href="#1-数组操作" class="headerlink" title="1.数组操作"></a>1.数组操作</h4><ol>
-<li>forEach()返回值是 undefined，不可以链式调用。</li>
-<li>map()返回一个新数组，原数组不会改变。</li>
-<li>flat()默认只会拉平一层，flat（n）拉平 n 层，Infinity 无限次,flat()会跳过空格,返回新数组不改变原数组</li>
-<li>数组去重，3 种方法</li>
+<li><code>forEach()</code>返回值是 undefined，不可以链式调用。</li>
+<li><code>map()</code>返回一个新数组，原数组不会改变。</li>
+<li><code>flat()</code>默认只会拉平一层，flat（n）拉平 n 层，Infinity 无限次,flat()会跳过空格,返回新数组不改变原数组</li>
+<li>数组去重，3 种<code>方法</code></li>
 </ol>
 <ul>
-<li>遍历加 indexof 去重。</li>
-<li>for 循环嵌套 splice 去重，</li>
-<li>es6 new Set 去重（原理是通过 map 实现的）</li>
+<li>遍历加<code>indexof</code> 去重。</li>
+<li><code>for</code>循环嵌套 <code>splice</code> 去重，</li>
+<li>es6 <code>new Set</code> 去重（原理是通过 map 实现的）</li>
 </ul>
 <ol start="5">
-<li>字符串截取的方法</li>
+<li><code>字符串截取</code>的方法</li>
 </ol>
 <ul>
 <li>slice（开始索引，结束索引）</li>
@@ -786,11 +815,11 @@ return B();
 </ul>
 <h4 id="2-抖动与防抖"><a href="#2-抖动与防抖" class="headerlink" title="2.抖动与防抖"></a>2.抖动与防抖</h4><p><strong>函数防抖</strong></p>
 <blockquote>
-<p>函数防抖是通过设置定时器，判断，当持续触发事件时，一定时间内没有再触发事件，事件处理函数才会执行一次，如果设定的延时到来之前又触发了事件，那么就重新开始延时.<br>作用: 作用在于限制浏览器发送请求的次数，减少服务器压力，</p>
+<p>函数防抖是通过设置定时器，判断，当持<code>续触发事件</code>时，一定时间内<code>没有</code>再触发事件，事件处理函数才会执行一次，如果设定的延时到来之前又触发了事件，那么就重新开始延时.<br>作用: 作用在于限制浏览器发送请求的次数，减少服务器压力，</p>
 </blockquote>
 <p><strong>函数节流</strong></p>
 <blockquote>
-<p>函数节流是通过设置定时器加时间戳的模式来控制一定时间内只触发一次函数，原理是判断是否达到给定的时间来触发函数。</p>
+<p>函数节流是通过<code>设置定时器</code>加时间戳 的模式来控制一定时间内<code>只触发</code>一次函数，原理是判断是否达到给定的时间来触发函数。</p>
 </blockquote>
 <p><code>区别</code>:两者的区别在于函数节流无论事件触发的多频繁，都会保证在规定时间内触发一次函数， 而函数防抖只是在最后一次事件后才触发一次函数。</p>
 <h4 id="3-跨域解决方案"><a href="#3-跨域解决方案" class="headerlink" title="3.跨域解决方案"></a>3.跨域解决方案</h4><p><a href="https://juejin.im/entry/59b8fb276fb9a00a42474a6f" target="_blank" rel="noopener">转前端常见跨域解决方案（全）</a></p>
@@ -802,16 +831,17 @@ return B();
 <li>cors(后端处理)</li>
 <li>nginx 反向代理(通过 add_header 处理添加一些响应头信息)</li>
 </ol>
-<h4 id="4-get-和-post-区别"><a href="#4-get-和-post-区别" class="headerlink" title="4.get 和 post 区别"></a>4.get 和 post 区别</h4><ul>
-<li>get 和 post 请求的区别在于， get 请求需要将参数以？拼接在 url 后面，而 post 不需要。</li>
-<li>post 请求需要设置一个请求头 content-type application x-www-form-urlencode,get 使用默认请求头</li>
+<h4 id="4-get-和-post-区别"><a href="#4-get-和-post-区别" class="headerlink" title="4.get 和 post 区别"></a>4.get 和 post 区别</h4><p><strong>get 和 post 请求的区别在于</strong></p>
+<ol>
+<li>get 请求需要将参数以？拼接在 url 后面，而 post 不需要。</li>
+<li><code>post</code> 请求需要设置一个请求头 content-type application x-www-form-urlencode,<br><code>get</code> 使用默认请求头</li>
 <li>post 请求参数以&amp;拼接放入请求体中，上传给服务器。而 get 请求体中不传参或 null,</li>
 <li>get 请求相较于 post 请求，安全性低。</li>
 <li>get 请求对数据大小有 4k 的限制，而 post 没有明显限制</li>
-</ul>
-<p><code>put和post的区别</code> : put 指定了资源在服务器的位置,而 post 没有 , put 一般用于对资源的创建于修改.</p>
+</ol>
+<p><code>put和post的区别 =&gt;</code><br>put 指定了资源在服务器的位置,而 post 没有 , put 一般用于对资源的创建于修改.</p>
 <h4 id="5-http-状态码"><a href="#5-http-状态码" class="headerlink" title="5.http 状态码"></a>5.http 状态码</h4><blockquote>
-<p>常见的状态码 200 请求成功， 302： 重定向 304： 文件未修改 400：请求语法错误，401：未授权 404： 找不到资源，405：访问不被允许 500 服务器错误。</p>
+<p>常见的状态码 :<br>200 请求成功， 302： 重定向 304： 文件未修改 ,<br>400：请求语法错误，401：未授权 404： 找不到资源，405：访问不被允许 ,<br>500 服务器错误。</p>
 </blockquote>
 <h4 id="6-浏览器的渲染原理？"><a href="#6-浏览器的渲染原理？" class="headerlink" title="6.浏览器的渲染原理？"></a>6.浏览器的渲染原理？</h4><p>解析 html 以构建 dom 树 -&gt; 构建 render 树 -&gt; 布局 render 树 -&gt; 绘制 render 树</p>
 <h4 id="7-当输入地址，按下回车的时候，页面发生了什么？"><a href="#7-当输入地址，按下回车的时候，页面发生了什么？" class="headerlink" title="7.当输入地址，按下回车的时候，页面发生了什么？"></a>7.当输入地址，按下回车的时候，页面发生了什么？</h4><blockquote>
@@ -827,17 +857,87 @@ return B();
 <li>useCapture：可选。布尔值，指定事件是否在捕获或冒泡阶段执行(true-事件句柄在捕获阶段执行；false-默认。事件句柄在冒泡阶段执行)。</li>
 </ol>
 <p><code>移除事件监听</code>：element.removeEventListener(event, function,useCapture) 匿名函数无法移出</p>
-<h4 id="10-浏览器缓存"><a href="#10-浏览器缓存" class="headerlink" title="10.浏览器缓存"></a>10.浏览器缓存</h4><p><a href="https://juejin.im/post/5c417993f265da61285a6075" target="_blank" rel="noopener">转:浏览器缓存</a></p>
-<h4 id="11-重排-回流-和重绘是什么？"><a href="#11-重排-回流-和重绘是什么？" class="headerlink" title="11.重排(回流)和重绘是什么？"></a>11.重排(回流)和重绘是什么？</h4><p>1、回流：当 Render Tree 中部分或全部元素的尺寸、结构、或某些属性发生改 变时，浏览器重新渲染部分或全部文档的过程称为回流。每个页面至少需要一 次回流，就是在页面第一次加载的时候。<br>2、重绘：当页面中元素样式的改变并不影响它在文档流中的位置时（例如：color、 background-color、visibility 等），这些属性只是影响元素的外观，风格，而不 会影响布局的，浏览器会将新样式赋予给元素并重新绘制它，这个过程称为重 绘。</p>
-<blockquote>
-<p>回流必将引起重绘，而重绘不一定会引起回流。 因为：如果一个元素引发了回流，它就影响了父级以及兄弟节点的位置，它们 都要重新渲染了，所以回流必定引发重绘。</p>
+<h4 id="10-浏览器缓存"><a href="#10-浏览器缓存" class="headerlink" title="10.浏览器缓存"></a>10.浏览器缓存</h4><p>两种 : <code>强缓存</code>和<code>协商缓存</code>。</p>
+<ol>
+<li>强缓存<blockquote>
+<p>定义强缓存是指浏览器在请求资源时，直接从本地缓存中获取资源，并且不会发送请求到服务器。</p>
 </blockquote>
+</li>
+</ol>
+<p>总结: <code>简单粗暴，如果资源没过期，就取缓存，如果过期了，则请求服务器。</code></p>
+<ol start="2">
+<li>协商缓存<blockquote>
+<p>协商缓存是指浏览器在请求资源时,浏览器和服务器之间协商确定是否使用缓存副本的形式。</p>
+</blockquote>
+</li>
+</ol>
+<p><code>触发条件：</code></p>
 <ul>
-<li>触发重排和重绘：<br>• 页面首次渲染<br>• 浏览器窗口大小发生改变<br>• 元素尺寸或位置发生改变<br>• 元素内容变化（文字数量或图片大小等等）<br>• 元素字体大小变化<br>• 添加或者删除可见的 DOM 元素</li>
+<li>Cache-Control 的值为 no-cache （不强缓存）</li>
+<li>或者 max-age 过期了 （强缓存，但总有过期的时候）</li>
 </ul>
-<h3 id="五-VUE"><a href="#五-VUE" class="headerlink" title="五 VUE"></a>五 VUE</h3><h4 id="1-vue-源码原理"><a href="#1-vue-源码原理" class="headerlink" title="1.vue 源码原理"></a>1.vue 源码原理</h4><blockquote>
-<p><a href="https://cn.vuejs.org/v2/guide/instance.html?" target="_blank" rel="noopener">vue</a>的原理：主要是采用数据劫持结合发布者-订阅者模式的方式，通过 Object.defineProperty()来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。它是通过 observer,compile ,watcher 三个模块来实现的。observer 的核心是在数据变化时通过 object.definePrototype(/)设置 setter 和 getter，来通知 watcher，watcher 是 observer 和 compile 之间通信的桥梁，主要是调用 update 方法来触发 compile 中的回调，compile(使用 document fragment 操作节点)解析模版指令替换数据，并且为操作节点绑定更新函数，从而更新视图。</p>
+<p>总结: <code>也就是说，不管怎样，都可能最后要进行协商缓存（no-store 除外）</code></p>
+<ol start="3">
+<li>为什么要进行缓存？</li>
+</ol>
+<ul>
+<li><code>提升网页加载速度</code>：浏览器缓存能够存储网页的静态资源，下次访问时直接从缓存中加载，避免了不必要的服务器请求，从而加快了网页加载速度，提升用户体验。</li>
+<li><code>减少网络流量</code>：通过从缓存中加载资源，浏览器可以避免重复的网络请求，减少数据传输量，节省了用户的网络流量费用。</li>
+<li><code>降低服务器负载</code>：浏览器缓存减少了对服务器的请求次数，降低了服务器的负载压力。特别对于繁忙的网站而言，可以更好地处理并发请求，提高服务器的性能和响应能力。</li>
+<li><code>改善用户体验</code>：快速的网页加载速度和较低的网络延迟显著改善了用户体验。用户能够更快地获取所需信息，减少等待时间，提高用户满意度。</li>
+<li><code>离线访问能力</code>：对于具有离线访问能力的应用程序（如 PWA），浏览器缓存可以存储应用程序的核心文件和数据，使得用户在没有网络连接的情况下仍然能够访问应用程序并查看之前加载过的内容。</li>
+</ul>
+<p>原文链接：<a href="https://blog.csdn.net/weixin_45215308/article/details/139871826" target="_blank" rel="noopener">https://blog.csdn.net/weixin_45215308/article/details/139871826</a></p>
+<p><a href="https://juejin.im/post/5c417993f265da61285a6075" target="_blank" rel="noopener">转:浏览器缓存</a></p>
+<ol start="4">
+<li><code>浏览器缓存，HTTP缓存，service work</code>缓存详解</li>
+</ol>
+<ul>
+<li>浏览器缓存: 1.session 缓存 2. local 缓存</li>
+<li>HTTP 缓存: 1. 强缓存 2. 协商缓存</li>
+<li>service worker 缓存:<br><code>主要用途:pwa,离线处理,前置处理,预加载资源</code><blockquote>
+<p>Service Worker 是一种在浏览器后台运行的脚本，它可以拦截和处理网页发起的网络请求，提供离线缓存和推送通知等功能。在离线缓存方面，Service Worker 可以使用 Cache API 来创建自定义的缓存，进而实现对资源的离线存储和提供离线访问</p>
 </blockquote>
+</li>
+</ul>
+<h4 id="11-重排-回流-和重绘是什么？"><a href="#11-重排-回流-和重绘是什么？" class="headerlink" title="11.重排(回流)和重绘是什么？"></a>11.重排(回流)和重绘是什么？</h4><ol>
+<li><p>回流：</p>
+<blockquote>
+<p>当 Render Tree 中部分或全部元素的<code>尺寸、结构、或某些属性</code>发生改 变时，浏览器重新渲染部分或全部文档的过程称为回流。每个页面至少需要一 次回流，就是在页面第一次加载的时候。</p>
+</blockquote>
+</li>
+<li><p>重绘：</p>
+<blockquote>
+<p>当页面中元素样式的改变并不影响它在文档流中的位置时（例如：<code>color、 background-color、visibility</code>等），这些属性只是影响元素的外观，风格，而不 会影响布局的，浏览器会将新样式赋予给元素并重新绘制它，这个过程称为重 绘。</p>
+</blockquote>
+</li>
+</ol>
+<p>总结: <code>回流必将引起重绘，而重绘不一定会引起回流。 因为：如果一个元素引发了回流，它就影响了父级以及兄弟节点的位置，它们 都要重新渲染了，所以回流必定引发重绘</code>。</p>
+<ol start="3">
+<li>触发重排和重绘：<br>• 页面首次渲染<br>• 浏览器窗口大小发生改变<br>• 元素尺寸或位置发生改变<br>• 元素内容变化（文字数量或图片大小等等）<br>• 元素字体大小变化<br>• 添加或者删除可见的 DOM 元素</li>
+</ol>
+<h3 id="五-VUE"><a href="#五-VUE" class="headerlink" title="五 VUE"></a>五 VUE</h3><h4 id="1-vue-源码原理"><a href="#1-vue-源码原理" class="headerlink" title="1.vue 源码原理"></a>1.vue 源码原理</h4><h5 id="1-1-vue-原理"><a href="#1-1-vue-原理" class="headerlink" title="1.1 vue 原理"></a>1.1 vue 原理</h5><blockquote>
+<p><a href="https://cn.vuejs.org/v2/guide/instance.html?" target="_blank" rel="noopener">vue</a>的<code>原理</code>：<br>主要是采用数据劫持结合发布者-订阅者模式的方式，通过 Object.defineProperty()来劫持各个属性的 setter，getter，在数据变动时发布消息给订阅者，触发相应的监听回调。</p>
+</blockquote>
+<p><code>过程</code></p>
+<blockquote>
+<p>它是通过<code>observer,compile ,watcher</code> 三个模块来实现的。observer 的核心是在数据变化时通过 object.definePrototype(/)设置 setter 和 getter，来通知 watcher，watcher 是 observer 和 compile 之间通信的桥梁，主要是调用 update 方法来触发 compile 中的回调，compile(使用 document fragment 操作节点)解析模版指令替换数据，并且为操作节点绑定更新函数，从而更新视图。</p>
+</blockquote>
+<h5 id="1-2-v-model-原理"><a href="#1-2-v-model-原理" class="headerlink" title="1.2 v-model 原理"></a>1.2 v-model 原理</h5><blockquote>
+<p>原理：v-model 本质上是一个<code>语法糖</code>。例如在 input 中，就是<code>value</code>属性和<code>input</code>事件的合写</p>
+</blockquote>
+<ol>
+<li><p>v-bind 绑定响应式数据；</p>
+</li>
+<li><p>通过 oninput 触发事件获取当前$event.target.value，然后赋值给当前变量。</p>
+</li>
+</ol>
+<ul>
+<li><p>作用：提供数据的双向绑定</p>
+</li>
+<li><p>双向绑定：数据变，视图跟着变；视图变，数据跟着变</p>
+</li>
+</ul>
 <h4 id="2-vue-的生命周期"><a href="#2-vue-的生命周期" class="headerlink" title="2. vue 的生命周期"></a>2. vue 的生命周期</h4><blockquote>
 <p>vue 的生命周期分为八个阶段,创建前创建后, 挂载前和挂载后, 更新前更新后, 销毁前销毁后.</p>
 </blockquote>
@@ -854,14 +954,31 @@ return B();
 <li>个人理解: 在页面渲染的时候, 首先应该渲染父组件,所以先执行父组件的 create, 而父组件里通常是有子组件的,那么这个时候,因为父组件本身的完整内容是包含子组件的,所以,可以想象 , 如果同时挂载多个子组件的话,那么,肯定要等到子组件渲染完成后, 父组件才能完整的挂载 el 完成. 因为 子组件是父组件的一部分,要渲染完成父组件,那么部分的组件肯定先比父组件完成挂载.</li>
 </ol>
 <h4 id="3-vue-中子组件传值给父组件-的三种方式"><a href="#3-vue-中子组件传值给父组件-的三种方式" class="headerlink" title="3.vue 中子组件传值给父组件 的三种方式"></a>3.vue 中子组件传值给父组件 的三种方式</h4><ol>
-<li>props 配合$emit 父组件中必须要有 .sync 修饰符 ，它的作用是当一个子组件改变一个 prop 的值的时候，这个变化会同步到父组件当中所绑定。</li>
-<li>先在父组件 methods 中创建一个方法， 然后在子组件用自定义事件触发这个方法进行传值。</li>
-<li>v-model 配合 input 。（不推荐）</li>
+<li><p><code>props</code> 配合<code>$emit</code> 父组件中必须要有 .sync 修饰符 ，它的作用是当一个子组件改变一个 prop 的值的时候，这个变化会同步到父组件当中所绑定。</p>
+</li>
+<li><p>先在父组件<code>methods</code>中创建一个方法， 然后在子组件用自定义事件触发这个方法进行传值。</p>
+</li>
+<li><p>v-model 配合 input 。（不推荐）</p>
+</li>
+<li><p>组件通信</p>
+</li>
 </ol>
 <ul>
-<li>===&gt;一般问完组件通信 :=&gt; 父传子:父组件声明变量,子组件使用 props 声明接收,<br>父:<code>&lt;child :msg=&quot;message&quot;&gt;&lt;/child&gt;</code> 子:<code>&lt;div&gt;&lt;/div&gt;</code></li>
-<li>===&gt; 子传父的方式. :=&gt; 先在父组件 methods 中创建一个方法<code>@msgFunc</code>， 然后在子组件用自定义事件触发这个 <code>this.$emit(&#39;msgFunc&#39;)</code>;方法进行传值。</li>
-<li>===&gt;非父子 : <code>Bus.$emit(&#39;on&#39;, &#39;来自兄弟组件&#39;)</code> -&gt; <code>Bus.$on(&#39;on&#39;, (msg) =&gt; {  this.message = msg }) =&gt;msg = 来自兄弟组件</code></li>
+<li><p>=&gt; 父传子:父组件声明变量,子组件使用 props 声明接收,</p>
+<blockquote>
+<p>父:<code>&lt;child :msg=&quot;message&quot;&gt;&lt;/child&gt;</code> 子:<code>&lt;div&gt;&lt;/div&gt;</code></p>
+</blockquote>
+</li>
+<li><p>=&gt; 子传父的方式.</p>
+<blockquote>
+<p>:=&gt; 先在父组件 methods 中创建一个方法<code>@msgFunc</code>， 然后在子组件用自定义事件触发这个 <code>this.$emit(&#39;msgFunc&#39;)</code>;方法进行传值。</p>
+</blockquote>
+</li>
+<li><p>=&gt;非父子 – 事件总线 :</p>
+<blockquote>
+<p><code>Bus.$emit(&#39;on&#39;, &#39;来自兄弟组件&#39;)`` -&gt;</code>Bus.$on(‘on’, (msg) =&gt; { this.message = msg }) =&gt;msg = 来自兄弟组件</p>
+</blockquote>
+</li>
 </ul>
 <h4 id="4-vue-组件间的传参方式"><a href="#4-vue-组件间的传参方式" class="headerlink" title="4.vue 组件间的传参方式"></a>4.vue 组件间的传参方式</h4><ol>
 <li><a href="https://vuex.vuejs.org/zh/" target="_blank" rel="noopener">Vuex</a><blockquote>
@@ -870,9 +987,37 @@ return B();
 </li>
 </ol>
 <ul>
-<li>Vuex 优缺点<ul>
-<li>优点</li>
+<li><p>State</p>
+<blockquote>
+<p>Vuex 使用单一状态树——是的，用一个对象就包含了全部的应用层级状态。至此它便作为一个“唯一数据源 (SSOT)”而存在。这也意味着，每个应用将仅仅包含一个 store 实例。单一状态树让我们能够直接地定位任一特定的状态片段，在调试的过程中也能轻易地取得整个当前应用状态的快照。<br>State 属性是 Vuex 的单一状态树</p>
+</blockquote>
+</li>
+<li><p>Getter</p>
+<blockquote>
+<p>有时候我们需要从 store 中的 state 中派生出一些状态，例如对列表进行过滤并计数<br>Getter 类似于 Vue 的 computed 对象。是根据业务逻辑来处理 State，使得生成业务所需的属性。</p>
+</blockquote>
+</li>
+<li><p>Mutation</p>
+<blockquote>
+<p>更改 Vuex 的 store 中的状态的唯一方法是提交 mutation。Vuex 中的 mutation 非常类似于事件：每个 mutation 都有一个字符串的 事件类型 (type) 和 一个 回调函数 (handler)。<br>Mutation 是唯一用来更改 Vuex 中状态的方法。</p>
+</blockquote>
+</li>
+<li><p>Action</p>
+<blockquote>
+<p>?Action 类似于 mutation，不同在于：<br>★Action 提交的是 mutation，而不是直接变更状态。<br>★Action 可以包含任意异步操作。<br>Action 是用来解决异步操作而产生的，它提交的是 Mutation。</p>
+</blockquote>
+</li>
+<li><p>Module</p>
+<blockquote>
+<p>由于使用单一状态树，应用的所有状态会集中到一个比较大的对象。当应用变得非常复杂时，store 对象就有可能变得相当臃肿。 为了解决以上问题，Vuex 允许我们将 store 分割成模块（module）。每个模块拥有自己的 state、getter、mutation、action、甚至是嵌套子模块——从上至下进行同样方式的分割<br>Module 是将 Vuex 模块化的对象，目的是更好的维护。</p>
+</blockquote>
+</li>
 </ul>
+<p>原文链接：<a href="https://blog.csdn.net/xiaolu567/article/details/126277746" target="_blank" rel="noopener">https://blog.csdn.net/xiaolu567/article/details/126277746</a></p>
+<p><strong>Vuex 优缺点</strong></p>
+<blockquote>
+<p>优点</p>
+</blockquote>
 <ol>
 <li>解决了多层组件之间繁琐的事件传播。</li>
 <li>解决了多组件依赖统同一状态的问题。</li>
@@ -883,33 +1028,46 @@ return B();
 <li>缺点</li>
 </ul>
 <ol>
-<li>不能做数据持久化，刷新页面就要重制，要做数据持久化可以考虑使用 localstorage。</li>
-<li>增加额外的代码体积，简单的业务场景不建议使用</li>
-</ol>
+<li><p>不能做数据持久化，刷新页面就要重制，要做数据持久化可以考虑使用 localstorage。</p>
 </li>
-</ul>
-<ol start="2">
-<li>本地存储传值</li>
-<li>路由传参</li>
+<li><p>增加额外的代码体积，简单的业务场景不建议使用</p>
+</li>
+<li><p>本地存储传值</p>
+</li>
+<li><p>路由传参</p>
+</li>
 </ol>
 <ul>
-<li><p>方案一<br>getDescribe(id) {<br>直接调用$router.push 实现携带参数的跳转</p>
-<pre><code>      this.$router.push({</code></pre><p>path: <code>/describe/${id}</code>,<br>})<br>}<br>路由配置如下：<br>{<br>path: ‘/describe/:id’,<br>name: ‘Describe’,<br>component: Describe<br>}</p>
-</li>
-<li><p>方案二<br>this.$router.push({</p>
-<pre><code>    name: &#39;Describe&#39;,
-    params(query): {   
-      id: id
-    }
-  })
-  获取:
-  this.$route.params(query).id</code></pre></li>
+<li>方案一</li>
 </ul>
+<pre class="line-numbers language-js"><code class="language-js">  <span class="token function">getDescribe</span><span class="token punctuation">(</span>id<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token comment" spellcheck="true">// 直接调用$router.push 实现携带参数的跳转</span>
+    <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+      path<span class="token punctuation">:</span> <span class="token operator">/</span>describe<span class="token operator">/</span>$<span class="token punctuation">{</span>id<span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  <span class="token punctuation">}</span>
+  <span class="token comment" spellcheck="true">// 路由配置如下：</span>
+  <span class="token punctuation">{</span>
+    path<span class="token punctuation">:</span> <span class="token string">'/describe/:id'</span><span class="token punctuation">,</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Describe'</span><span class="token punctuation">,</span>
+    component<span class="token punctuation">:</span> Describe
+  <span class="token punctuation">}</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ul>
+<li>方案二</li>
+</ul>
+<pre class="line-numbers language-js"><code class="language-js">  <span class="token keyword">this</span><span class="token punctuation">.</span>$router<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span><span class="token punctuation">{</span>
+    name<span class="token punctuation">:</span> <span class="token string">'Describe'</span><span class="token punctuation">,</span>
+    <span class="token function">params</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">:</span> <span class="token punctuation">{</span>
+      id<span class="token punctuation">:</span> id
+    <span class="token punctuation">}</span>
+   <span class="token punctuation">}</span><span class="token punctuation">)</span>
+  获取<span class="token punctuation">:</span>
+  <span class="token keyword">this</span><span class="token punctuation">.</span>$route<span class="token punctuation">.</span><span class="token function">params</span><span class="token punctuation">(</span>query<span class="token punctuation">)</span><span class="token punctuation">.</span>id<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p><a href="https://blog.csdn.net/mf_717714/article/details/81945218?utm_medium=distribute.pc_relevant.none-task-blog-baidujs-2" target="_blank" rel="noopener">路由传参 params(query)区别</a></p>
 <ul>
-<li><p>方案三</p>
-<pre><code> &lt;router-link :to=&quot;{path:&#39;/test&#39;,query: {name: id}}&quot;&gt;跳转&lt;/router-link&gt;</code></pre></li>
+<li>方案三</li>
 </ul>
+<pre class="line-numbers language-js"><code class="language-js"> <span class="token operator">&lt;</span>router<span class="token operator">-</span>link <span class="token punctuation">:</span>to<span class="token operator">=</span><span class="token string">"{path:'/test',query: {name: id}}"</span><span class="token operator">></span>跳转<span class="token operator">&lt;</span><span class="token operator">/</span>router<span class="token operator">-</span>link<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h4 id="5-router和-route-有什么区别"><a href="#5-router和-route-有什么区别" class="headerlink" title="5.$router和$route 有什么区别"></a>5.$router和$route 有什么区别</h4><blockquote>
 <p>$route 是路由对象，负责解析 url 的 hash 值，主要用于获取几个属性（name,parmas,path,query），而 $router 是路由实例对象，负责的是实现路由跳转功能。</p>
 </blockquote>
@@ -917,8 +1075,8 @@ return B();
 <h4 id="6-vue-router-中-hash-模式与-history-模式的区别"><a href="#6-vue-router-中-hash-模式与-history-模式的区别" class="headerlink" title="6. vue-router 中 hash 模式与 history 模式的区别"></a>6. vue-router 中 hash 模式与 history 模式的区别</h4><blockquote>
 <p>vue-router 有两种模式。一种是默认的 hash 模式，一种是 history 模式。<br>如何去除 hash 模式的# 在路由对象里写 mode:history</p>
 </blockquote>
-<p>hash 模式 原理是利用 window 监听 hashchange 事件，由 hash 改变的 url 都会被浏览器记录下来，浏览器的前进后退也可以对其控制，虽然没有请求服务器，但还是将页面和 url 一一关联起来了，这个就是 hash 模式，也是前端路由中，单页应用的标配。</p>
-<p>history 模式，是利用 H5 新增的 history interface 中的 history.pushState（） 和 history.replaceState（） 来请求服务器（前端的 url 必须和实际向后端发起请求的 url 一致）实现的，它会向服务器发送请求。 history 模式在刷新和 F5 的时候会出现 404 错误，需要用 nginx 配置出错时</p>
+<p>hash 模式 原理是利用 window 监听 <code>hashchange</code> 事件，由 hash 改变的 url 都会被浏览器记录下来，浏览器的前进后退也可以对其控制，虽然没有请求服务器，但还是将页面和 url 一一关联起来了，这个就是 hash 模式，也是前端路由中，单页应用的标配。</p>
+<p>history 模式，是利用 H5 新增的 history interface 中的<code>history.pushState</code>（） 和 history.replaceState（） 来请求服务器（前端的 url 必须和实际向后端发起请求的 url 一致）实现的，它会向服务器发送请求。 history 模式在刷新和 F5 的时候会出现 404 错误，需要用 nginx 配置出错时</p>
 <h4 id="7-vue-杂项问题"><a href="#7-vue-杂项问题" class="headerlink" title="7.vue 杂项问题"></a>7.vue 杂项问题</h4><ol>
 <li><p>vue 是单向绑定还是双向绑定？<br>vue 是单向绑定的 ， 双向是指 view 层和 model 数据层双向绑定， 而 v-model 只是双向绑定的一个语法糖。<br>组件和组件中是单向绑定的、</p>
 </li>
@@ -926,7 +1084,9 @@ return B();
 </li>
 <li><p><a href="https://www.cnblogs.com/Sherlock09/p/11023593.html" target="_blank" rel="noopener">vue-loader</a>是什么？<br>是解析和转换。vue 文件的工具，作用是提取出可被浏览器识别的 js 代码</p>
 </li>
-<li><p>vue 中<a href="https://www.jianshu.com/p/a6f741c7b500" target="_blank" rel="noopener"> keep-alive</a> 组件的作用<br><code>&lt;keep-alive&gt;</code>是 Vue 的内置组件，能在组件切换过程中将状态保留在内存中，防止重复渲染 DOM。<br>keep-alive：主要用于保留组件状态或避免重新渲染。<br>当二个组件被很频繁的调用的时候可以使用 keep-alive 标签进行缓存，这样页面就会从缓存中快速渲染，而不是重新渲染。 5.<a href="https://segmentfault.com/a/1190000017752182?utm_source=tag-newest" target="_blank" rel="noopener"> vue-router 如何响应 路由参数 的变化</a>？ 1.使用 watch 监听。 2. 使用 beforeUpdate 守卫</p>
+<li><p>vue 中<a href="https://www.jianshu.com/p/a6f741c7b500" target="_blank" rel="noopener"> keep-alive</a> 组件的作用<br><code>&lt;keep-alive&gt;</code>是 Vue 的内置组件，能在组件切换过程中将状态保留在内存中，防止重复渲染 DOM。<br>keep-alive：主要用于保留组件状态或避免重新渲染。<br>当二个组件被很频繁的调用的时候可以使用 keep-alive 标签进行缓存，这样页面就会从缓存中快速渲染，而不是重新渲染。</p>
+</li>
+<li><p><a href="https://segmentfault.com/a/1190000017752182?utm_source=tag-newest" target="_blank" rel="noopener"> vue-router 如何响应 路由参数 的变化</a>？ 1.使用 watch 监听。 2. 使用 beforeUpdate 守卫</p>
 </li>
 <li><p><a href="https://www.cnblogs.com/shenjianping/p/11330126.html" target="_blank" rel="noopener">过滤器</a></p>
 </li>
@@ -935,23 +1095,27 @@ return B();
 <p>将使用频率比较多的部分提取出来，定义一个对象可以包含任意组件选项。</p>
 </blockquote>
 </li>
-<li><p>使用时混入的对象会跟组件中的对象进行合并；<br>　　 2. 同名的钩子函数会合并成数组，先调用混入的钩子函数；<br>　　 3. 出现相同的属性或方法时会调用组件内的方法。</p>
+<li><p>使用时混入的对象会跟组件中的对象进行合并</p>
 </li>
-<li><p>router-link 高亮处理 1.使用类 router-link-active<br>2.在路由中配置 linkActiveClass：‘类名’（类名为自定义样式）</p>
+</ol>
+<ul>
+<li>1.同名的钩子函数会合并成数组，先调用混入的钩子函数；</li>
+<li>2.出现相同的属性或方法时会调用组件内的方法。</li>
+</ul>
+<ol start="9">
+<li>router-link 高亮处理<ul>
+<li>1.使用类 router-link-active</li>
+<li>2.在路由中配置 linkActiveClass：‘类名’（类名为自定义样式）</li>
+</ul>
 </li>
-<li><p><a href="https://blog.csdn.net/qq_40958876/article/details/99822406?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">编程式导航</a><br>跳转：this.$router.push()  返回 :this.$router.back() 替换:this.$replace() ===》 关于跳转和替换的区别在于 历史记录的问题， ：=》 跳转有历史记录，而替换没有。</p>
-</li>
-<li><p>/child 和 child 的区别<br>/child 访问的路径是/child 而 child 访问的是 /parent/child</p>
-</li>
-<li><p>vue 左侧菜单展开隐藏重新渲染 echars<br>加个监控=&gt; window.onresize</p>
-</li>
-<li><p>为什么 vue 中 data 是个函数而不是个对象</p>
-<blockquote>
+<li><a href="https://blog.csdn.net/qq_40958876/article/details/99822406?utm_medium=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase&depth_1-utm_source=distribute.pc_relevant.none-task-blog-BlogCommendFromMachineLearnPai2-1.nonecase" target="_blank" rel="noopener">编程式导航</a><br>跳转：this.$router.push()  返回 :this.$router.back() 替换:this.$replace() ===》 关于跳转和替换的区别在于 历史记录的问题， ：=》 跳转有历史记录，而替换没有。</li>
+<li>/child 和 child 的区别<br>/child 访问的路径是/child 而 child 访问的是 /parent/child</li>
+<li>vue 左侧菜单展开隐藏重新渲染 echars<br>加个监控=&gt; window.onresize</li>
+<li>为什么 vue 中 data 是个函数而不是个对象<blockquote>
 <p>因为组件是可复用的 vue 实例。它有可能被多次复用，而组件中的 data 写成一个函数，数据以函数返回值的形式定义，这样每复用一次组件，就会返回一个新的 data，类似于给每个组件实例创建了一个私有的数据空间，让各自组件维护自己的数据，互不影响。 而如果写成对象的形式，就使得所有组件都共用一份 data，那么一个组件中改变就会造成所有的组件数据都会改变。</p>
 </blockquote>
 </li>
-<li><p><a href="https://www.jianshu.com/p/52e6692639f5" target="_blank" rel="noopener">slot 插槽 </a></p>
-<blockquote>
+<li><a href="https://www.jianshu.com/p/52e6692639f5" target="_blank" rel="noopener">slot 插槽 </a><blockquote>
 <p>作用是可以让父组件向子组件插入一些内容（包含 html 标签结构），并且也可以在父组件中拿到子组件的数据</p>
 </blockquote>
 </li>
@@ -1024,8 +1188,8 @@ return B();
 <li>2、数据绑定： vue 动态绑定一个变量的值为元素的某个属性的时候，会在变量前面加上冒号：</li>
 </ul>
 <pre class="line-numbers language-js"><code class="language-js"><span class="token operator">&lt;</span>img <span class="token punctuation">:</span>src<span class="token operator">=</span><span class="token string">"imgSrc"</span><span class="token operator">/</span><span class="token operator">></span>
-小程序 绑定某个变量的值为元素属性时，会用两个大括号括起来，如果不加括号，为 被认为是字符串
-  <span class="token operator">&lt;</span>image src<span class="token operator">=</span><span class="token string">"{{imgSrc}}"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>image<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<span class="token comment" spellcheck="true">// 小程序 绑定某个变量的值为元素属性时，会用两个大括号括起来，如果不加括号，为 被认为是字符串</span>
+<span class="token operator">&lt;</span>image src<span class="token operator">=</span><span class="token string">"{{imgSrc}}"</span><span class="token operator">></span><span class="token operator">&lt;</span><span class="token operator">/</span>image<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <ul>
 <li>3、列表循环</li>
 <li>4、显示与隐藏元素 vue 中，使用 v-if 和 v-show 控制元素的显示和隐藏 小程序中，使用 wx-if 和 hidden 控制元素的显示和隐藏</li>
@@ -1035,19 +1199,20 @@ return B();
 <li>8、父子组件通信 父组件向子组件传递数据，只需要在子组件通过 v-bind 传入一个值，在子组件中，通 过 props 接收，即可完成数据的传递 父组件向子组件通信和 vue 类似，但是小程序没有通过 v-bind，而是直接将值赋值给 一个变量 在子组件 properties 中，接收传递的值</li>
 </ul>
 <h5 id="5-computed-和-watcher-的区别？watch-实现原理？watch-有几种写-法？"><a href="#5-computed-和-watcher-的区别？watch-实现原理？watch-有几种写-法？" class="headerlink" title="5. computed 和 watcher 的区别？watch 实现原理？watch 有几种写 法？"></a>5. computed 和 watcher 的区别？watch 实现原理？watch 有几种写 法？</h5><blockquote>
-<p>使用场景：computed—-当一个属性受多个属性影响的时候，<br>使用 computed——-购物车商品结算。watch—-当一条数据影响多条 数据的时候，<br>使用 watch——-搜索框</p>
+<p>使用：computed—-当一个属性受多个属性影响的时候，<br>使用场景 computed —— <code>购物车商品结算</code>。<br>使用：watch —- 当一条数据影响多条 数据的时候，<br>使用场景 watch ——- <code>搜索框</code></p>
 </blockquote>
 <ul>
-<li>计算属性 computed :</li>
+<li><code>计算属性 computed</code> :</li>
 </ul>
 <ol>
 <li>支持缓存，只有依赖数据发生改变，才会重新进行计算</li>
-<li>不支持异步，当 computed 内有异步操作时无效，无法监听数据的变化<br>3.computed 属性值会默认走缓存，计算属性是基于它们的响应式依赖进行缓 存的，也就是基于 data 中声明过或者父组件传递的 props 中的数据通过计算 得到的值</li>
+<li>不支持异步，当 computed 内有异步操作时无效，无法监听数据的变化</li>
+<li>computed 属性值会默认走缓存，计算属性是基于它们的响应式依赖进行缓 存的，也就是基于 data 中声明过或者父组件传递的 props 中的数据通过计算 得到的值</li>
 <li>如果一个属性是由其他属性计算而来的，这个属性依赖其他属性，是一个 多对一或者一对一，一般用 computed</li>
 <li>如果 computed 属性属性值是函数，那么默认会走 get 方法；函数的返回值 就是属性的属性值；在 computed 中的，属性都有一个 get 和一个 set 方法， 当数据变化时，调用 set 方法。</li>
 </ol>
 <ul>
-<li>侦听属性 watch：</li>
+<li><code>侦听属性 watch</code>：</li>
 </ul>
 <ol>
 <li>不支持缓存，数据变，直接会触发相应的操作；</li>
@@ -1061,16 +1226,23 @@ return B();
 <h5 id="6-对-keep-alive-的了解？"><a href="#6-对-keep-alive-的了解？" class="headerlink" title="6.对 keep-alive 的了解？"></a>6.对 keep-alive 的了解？</h5><p>keep-alive 是 vue 内置的一个组件，可以使被包含的组件保留状态，或避免重新 渲染</p>
 <h5 id="7-Vue-中一句话就能回答的面试题？"><a href="#7-Vue-中一句话就能回答的面试题？" class="headerlink" title="7.Vue 中一句话就能回答的面试题？"></a>7.Vue 中一句话就能回答的面试题？</h5><p>1、css 只在当前组件起作用</p>
 <pre class="line-numbers language-js"><code class="language-js">答：在 style 标签中写入 scoped 即可。例如 <span class="token operator">&lt;</span>style scoped<span class="token operator">></span><span class="token operator">&lt;</span>style<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>2、v-if 和 v-show 的区别？<br>答：v-if 按照条件是否渲染，v-show 是 display 的 block 或 none<br>3、$route 和 $router 的区别？<br>答：$route 是路由信息对象，包括 path,params,hash,query,fullPath,matched,name 等路由信息参数。 $router 是路由实例对象，包括了路由的跳转方法，钩子函数等。<br>4、vue.js 的两个核心是什么？<br>答：数据驱动，组件系统<br>5、vue 几种常用的指令？</p>
+<p>2、v-if 和 v-show 的区别？<br>答：v-if 按照条件<code>是否渲染</code>，v-show 是 <code>display 的 block 或 none</code><br>3、$route 和 $router 的区别？<br>答：$route 是路由信息对象，包括 path,params,hash,query,fullPath,matched,name 等路由信息参数。 $router 是路由实例对象，包括了路由的跳转方法，钩子函数等。<br>4、vue.js 的两个核心是什么？<br>答：数据驱动，组件系统<br>5、vue 几种常用的指令？</p>
 <pre class="line-numbers language-js"><code class="language-js">答：v<span class="token operator">-</span><span class="token keyword">for</span><span class="token punctuation">,</span> v<span class="token operator">-</span><span class="token keyword">if</span><span class="token punctuation">,</span> v<span class="token operator">-</span><span class="token keyword">else</span><span class="token punctuation">,</span> v<span class="token operator">-</span>bind<span class="token punctuation">,</span> v<span class="token operator">-</span>on<span class="token punctuation">,</span> v<span class="token operator">-</span>show<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>6、v-on 可以绑定多个方法吗？<br>答：可以<br>7、vue 中 key 值的作用？<br>答：key 的作用主要是为了高效的更新虚拟 DOM<br>8、什么是 vue 的计算属性？<br>答：computed,适用于复杂数据处理，便于维护</p>
 <h5 id="8-computed-和-watch-区别"><a href="#8-computed-和-watch-区别" class="headerlink" title="8.computed 和 watch 区别"></a>8.computed 和 watch 区别</h5><p>computed 是计算属性，依赖其他属性计算值，并且 computed 的值有缓 存，只有当计算值变化才会返回内容。 watch 监听到值的变化就会执行回调，在回调中可以进行一些逻辑操作。<br>所以一般来说需要依赖别的属性来动态获得值的时候可以使用 computed，<br>对于监听到值的变化需要做一些复杂业务逻辑的情况可以使用 watch。<br>另外 computerd 和 watch` 还都支持对象的写法，这种方式知道的人并不 多。</p>
-<h5 id="9-Vue-的路由实现：hash-模式-和-history-模式"><a href="#9-Vue-的路由实现：hash-模式-和-history-模式" class="headerlink" title="9.Vue 的路由实现：hash 模式 和 history 模式"></a>9.Vue 的路由实现：hash 模式 和 history 模式</h5><p>hash 模式：在浏览器中符号“#”，#以及#后面的字符称之为 hash，用 window.location.hash 读取。<br>特点：hash 虽然在 URL 中，但不被包括在 HTTP 请求中；用来指导浏览器动作，对服务端安全无用，hash 不会重加 载页面。<br>history 模式：history 采用 HTML5 的新特性；且提供了两个新方法： pushState()， replaceState()可以对浏览器历史记录栈进行修改，以及 popState 事件的监听到状态变更,刷新的时候会出现 404</p>
+<h5 id="9-Vue-的路由实现：hash-模式-和-history-模式"><a href="#9-Vue-的路由实现：hash-模式-和-history-模式" class="headerlink" title="9.Vue 的路由实现：hash 模式 和 history 模式"></a>9.Vue 的路由实现：hash 模式 和 history 模式</h5><p><code>hash 模式</code>：在浏览器中符号“#”，#以及#后面的字符称之为 hash，用 window.location.hash 读取。<br>特点：hash 虽然在 URL 中，但不被包括在 HTTP 请求中；用来指导浏览器动作，对服务端安全无用，hash 不会重加 载页面。<br><code>history 模式</code>：history 采用 HTML5 的新特性；且提供了两个新方法： pushState()， replaceState()可以对浏览器历史记录栈进行修改，以及 popState 事件的监听到状态变更,刷新的时候会出现 404</p>
 <blockquote>
-<p>hash 模式和 history 模式有什么区别？ 1、地址栏展示不同 hash 模式地址栏有# 2、history 在服务器端有配置，如 果不配置，一刷新就会出现 404，hash 模式不用配置。 3、所监听的事件也 不一样 hash 监听 hashchange 事件 history 监听 popstate 事件 4、hash 模 式不会刷新页面，history 模式会刷新页面</p>
+<p>hash 模式和 history 模式有什么<code>区别</code>？<br>1、地址栏展示不同 hash 模式地址栏有#<br>2、history 在服务器端有配置，如 果不配置，一刷新就会出现 404，hash 模式不用配置。<br>3、所监听的事件也 不一样 hash 监听 hashchange 事件 history 监听 popstate 事件<br>4、hash 模 式不会刷新页面，history 模式会刷新页面</p>
 </blockquote>
-<h5 id="10-vue-项目中的性能优化"><a href="#10-vue-项目中的性能优化" class="headerlink" title="10. vue 项目中的性能优化"></a>10. vue 项目中的性能优化</h5><p>1.不要在模板里面写过多表达式 2.循环调用子组件时添加 key 3.频繁切换的使用 v-show，不频繁切换的使用 v-if 4.尽量少用 float，可以用 flex 布局 5.按需加载，可以用 require 或者 import()按需加载需要的组件 6.路由懒加载</p>
-<h5 id="11-下-vue3-和-vue2-有啥区别，性能为啥能提升"><a href="#11-下-vue3-和-vue2-有啥区别，性能为啥能提升" class="headerlink" title="11.下 vue3 和 vue2 有啥区别，性能为啥能提升"></a>11.下 vue3 和 vue2 有啥区别，性能为啥能提升</h5><p>1、使用了 proxy 替代 Object.defineProperty 2、压缩包体积更小 3、目录结构有一些改变</p>
+<h5 id="10-vue-项目中的性能优化"><a href="#10-vue-项目中的性能优化" class="headerlink" title="10. vue 项目中的性能优化"></a>10. vue 项目中的性能优化</h5><ol>
+<li>不要在模板里面写过多表达式 </li>
+<li>循环调用子组件时添加 key </li>
+<li>频繁切换的使用 v-show，不频繁切换的使用 v-if </li>
+<li>尽量少用 float，可以用 flex 布局 </li>
+<li>按需加载，可以用 require 或者 import()按需加载需要的组件</li>
+<li>路由懒加载</li>
+</ol>
+<h5 id="11-下-vue3-和-vue2-有啥区别，性能为啥能提升"><a href="#11-下-vue3-和-vue2-有啥区别，性能为啥能提升" class="headerlink" title="11.下 vue3 和 vue2 有啥区别，性能为啥能提升"></a>11.下 vue3 和 vue2 有啥区别，性能为啥能提升</h5><p>1、使用了 proxy 替代 Object.defineProperty<br>2、压缩包体积更小<br>3、目录结构有一些改变<br><code>详细</code></p>
 <ol>
 <li>重构响应式系统，使用 Proxy 替换 Object.defineProperty， 使用 Proxy 优势： •可直接监听数组类型的数据变化 •监听的目标为对象本身，不需要像 Object.defineProperty 一样遍历每个属性， 有一定的性能提升 •可拦截 apply、ownKeys、has 等 13 种方法，而 Object.defineProperty 不行 •直接实现对象属性的新增/删除</li>
 <li>新增 Composition API，更好的逻辑复用和代码组织</li>
@@ -1078,7 +1250,7 @@ return B();
 <li>代码结构调整，更便于 Tree shaking，使得体积更小</li>
 <li>使用 Typescript 替换 Flow</li>
 </ol>
-<h4 id="12-彻底理解-vue-中-render-函数与-template-的区别？"><a href="#12-彻底理解-vue-中-render-函数与-template-的区别？" class="headerlink" title="12. 彻底理解 vue 中 render 函数与 template 的区别？"></a>12. 彻底理解 vue 中 render 函数与 template 的区别？</h4><p>vue 中的 template 用来创建 html,有的时候需要用 js 来创建 html，这个时候需 要使用 render 函数<br>相同之处： render 函数跟 remplate 一样都是创建 html 模板<br>不同之处： template 逻辑简单，render 适合复杂逻辑 template 灵活性低，render 灵活性高 template 性能低，render 性能高 render 的优先级高于 template</p>
+<h4 id="12-彻底理解-vue-中-render-函数与-template-的区别？"><a href="#12-彻底理解-vue-中-render-函数与-template-的区别？" class="headerlink" title="12. 彻底理解 vue 中 render 函数与 template 的区别？"></a>12. 彻底理解 vue 中 render 函数与 template 的区别？</h4><p>vue 中的 template 用来创建 html,有的时候需要用 js 来创建 html，这个时候需 要使用 render 函数<br><code>相同之处</code>： render 函数跟 remplate 一样都是创建 html 模板<br><code>不同之处</code>： template 逻辑简单，render 适合复杂逻辑 template 灵活性低，render 灵活性高 template 性能低，render 性能高 render 的优先级高于 template</p>
 <h4 id="13-watch-与-computed-的使用场景"><a href="#13-watch-与-computed-的使用场景" class="headerlink" title="13 watch 与 computed 的使用场景"></a>13 watch 与 computed 的使用场景</h4><p>watch：网络请求，模糊查询，浏览器自适应，监控路由对象<br>computed：购物车结算， 过滤某些商品数据</p>
 <h4 id="14-如何检测路由参数的变化？"><a href="#14-如何检测路由参数的变化？" class="headerlink" title="14.如何检测路由参数的变化？"></a>14.如何检测路由参数的变化？</h4><p>通过属性监听来实现或者 beforeRouterUpdate()</p>
 <h4 id="15-什么是路由守卫？路由的钩子函数有哪些？分别说出使用-场景？"><a href="#15-什么是路由守卫？路由的钩子函数有哪些？分别说出使用-场景？" class="headerlink" title="15 什么是路由守卫？路由的钩子函数有哪些？分别说出使用 场景？"></a>15 什么是路由守卫？路由的钩子函数有哪些？分别说出使用 场景？</h4><p>路由守卫就是路由跳转前后的做的一些验证 钩子函数：<br>beforeRouteEnter 使用场景：登录验证<br>beforeRouteUpdate 使用场景：路由更新的时候<br>beforeRouteLeave 使用场景：路由离开的时候</p>
@@ -1122,11 +1294,102 @@ return B();
 <p>过程：浏览器输入域名-&gt;浏览器查询 dns 是否有缓存-&gt;DNS 查询到域名-&gt;TCP/IP 链接（三次握手）-&gt;建立连接-&gt;浏览器发出请求-&gt;服务器响应（1.2.3.4）-&gt;浏 览器会先获得响应头然后在获得响应体</p>
 </blockquote>
 <h4 id="38-前端如何进行登录身份的判断"><a href="#38-前端如何进行登录身份的判断" class="headerlink" title="38 前端如何进行登录身份的判断"></a>38 前端如何进行登录身份的判断</h4><p>前台发送登录请求 后台返回 token，前台得到后台返回的 token，将其写入到 localStorage 中，后续请求中都携带 token 后台判断 token 是否过期，如果过 期就对前台的请求响应过期标识或者状态码 前台得到过期标识后，清除 localStorage 中的 token，然后重定向到 login 路由</p>
-<h4 id="39-简述一下你对-web-性能优化的方案？"><a href="#39-简述一下你对-web-性能优化的方案？" class="headerlink" title="39 简述一下你对 web 性能优化的方案？"></a>39 简述一下你对 web 性能优化的方案？</h4><p>1、减少 http 请求<br> 2、使用浏览器缓存<br> 3、使用压缩<br> 4、将脚本放在底部<br> 5、 使用外部的 js 和 css<br> 6、精简代码 </p>
+<h4 id="39-简述一下你对-web-性能优化的方案？"><a href="#39-简述一下你对-web-性能优化的方案？" class="headerlink" title="39 简述一下你对 web 性能优化的方案？"></a>39 简述一下你对 web 性能优化的方案？</h4><p>1、减少 http 请求<br>2、使用浏览器缓存<br>3、使用压缩<br>4、将脚本放在底部<br>5、 使用外部的 js 和 css<br>6、精简代码</p>
 <h4 id="40-什么是-ts"><a href="#40-什么是-ts" class="headerlink" title="40 什么是 ts"></a>40 什么是 ts</h4><blockquote>
-<p>TypeScript，简称 ts，是微软开发的一种静态的编程语言，它是 JavaScript 的超集。<br>那么它有什么特别之处呢?<br>简单来说，js 有的 ts 都有，所有js 代码都可以在 ts 里面运行。<br>ts 支持类型支持，ts =  type +JavaScript。</p>
+<p>TypeScript，简称 ts，是微软开发的一种静态的编程语言，它是 JavaScript 的超集。<br>那么它有什么特别之处呢?<br>简单来说，js 有的 ts 都有，所有 js 代码都可以在 ts 里面运行。<br>ts 支持类型支持，ts = type +JavaScript。</p>
 </blockquote>
-<h4 id="41-ts-和-js-有什么区别呢？"><a href="#41-ts-和-js-有什么区别呢？" class="headerlink" title="41 ts 和 js 有什么区别呢？"></a>41 ts 和 js 有什么区别呢？</h4><p>JavaScript 属于动态编程语言，而ts 属于静态编程语言。<br>js：边解释边执行，错误只有在运行的时候才能发现<br>ts：先编译再执行，在写的时候就会发现错误了（ts不能直接执行，需要先编译成 js ）</p>
+<h4 id="41-ts-和-js-有什么区别呢？"><a href="#41-ts-和-js-有什么区别呢？" class="headerlink" title="41 ts 和 js 有什么区别呢？"></a>41 ts 和 js 有什么区别呢？</h4><p>JavaScript 属于动态编程语言，而 ts 属于静态编程语言。<br>js：边解释边执行，错误只有在运行的时候才能发现<br>ts：先编译再执行，在写的时候就会发现错误了（ts 不能直接执行，需要先编译成 js ）</p>
+<h4 id="42-vue-路由跳转-params-和-query-区别"><a href="#42-vue-路由跳转-params-和-query-区别" class="headerlink" title="42 vue 路由跳转 params 和 query 区别"></a>42 vue 路由跳转 params 和 query 区别</h4><ol>
+<li>传参可以使用 params 和 query 两种方式。</li>
+<li>使用 params 传参只能用 name 来引入路由，即 push 里面只能是 name:’xxxx’,不能是 path:’/xxx’,因为 params 只能用 name 来引入路由，如果这里写成了 path，接收参数页面会是 undefined！！！。</li>
+<li>使用 query 传参使用 path 来引入路由。<br>params 是路由的一部分,必须要在路由后面添加参数名。query 是拼接在 url 后面的参数，没有也没关系。</li>
+<li>二者还有点区别，直白的来说 query 相当于 get 请求，页面跳转的时候，可以在地址栏看到请求参数，而 params 相当于 post 请求，参数不会再地址栏中显示</li>
+</ol>
+<h4 id="Vue3-的常见-30-道核心面试题"><a href="#Vue3-的常见-30-道核心面试题" class="headerlink" title="Vue3 的常见 30 道核心面试题"></a>Vue3 的常见 30 道核心面试题</h4><ol>
+<li><p>什么是 Vue3？ Vue3 有哪些新增特性？<br>答：Vue3 是 Vue.js 框架的最新版本，它增加了很多新特性，包括 Composition API、Teleport、Suspense 和 Fragment 等。</p>
+</li>
+<li><p>Vue3 Composition API 是什么？它的作用是什么？<br>答：Vue3 Composition API 是 Vue3 中的一个新特性，它的作用是将组件中的逻辑分解成可复用的可组合函数。通过使用 Composition API，可以更好地组织代码和管理状态。</p>
+</li>
+<li><p>Vue3 中的 Teleport 是什么？它的作用是什么？<br>答：Vue3 中的 Teleport 是控制渲染位置的新指令。它的作用是在 DOM 中移动一个组件的内容而不改变组件的父级。</p>
+</li>
+<li><p>Vue3 中的 Suspense 是什么？它的作用是什么？<br>答：Vue3 中的 Suspense 是 Vue3 中新增的一个组件，它的作用是实现延迟加载和错误处理。在组件中加入 Suspense，可以让异步组件可以渲染出加载状态，并且如果异步组件加载时出现错误，也能够处理这些错误。</p>
+</li>
+<li><p>Vue3 中的 Fragment 是什么？它的作用是什么？<br>答：Vue3 中的 Fragment 是用来承载多个子元素的虚拟组件。它的作用是可以解决在 Vue2 中，使用 v-for 迭代元素时需要添加一个包装元素的问题。</p>
+</li>
+<li><p>什么是响应式系统？ Vue3 中的响应式系统有哪些更新？<br>答：响应式系统是 Vue 中的核心概念之一，它允许在状态发生变化时更新视图。Vue3 中的响应式系统更新包括 Proxy、Reflect 和 WeakMap 等。</p>
+</li>
+<li><p>Vue3 中的事件修饰符有哪些？<br>答：Vue3 中的事件修饰符与 Vue2 基本相同，包括 stop、prevent、capture 和 self 等。</p>
+</li>
+<li><p>Vue3 中的指令有哪些？</p>
+</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">// 答：Vue3中的指令包括v-if、v-for、v-bind、v-on、v-html、v-model、v-show、v-slot、v-text等。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="9">
+<li>Vue3 中如何实现动态组件？</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js">答：
+<span class="token comment" spellcheck="true">// Vue3中使用 &lt;component> 元素和 v-bind:is 属性来实现动态组件。例如，</span>
+<span class="token comment" spellcheck="true">// &lt;component v-bind:is="currentComponent">&lt;/component></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<ol start="10">
+<li>Vue3 如何实现异步组件加载？</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//答：Vue3中使用 import() 来异步加载组件。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="11">
+<li>Vue3 如何实现插槽？</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//答：Vue3中使用 &lt;slot name="slot-name">&lt;/slot> 来实现插槽。在父组件中使用 &lt;template v-slot:slot-name>&lt;/template> 来填充插槽。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="12">
+<li>Vue3 如何实现自定义指令？</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//答：Vue3使用 app.directive() 方法来注册指令，例如 app.directive('focus', {mounted(el) {el.focus()}}) 。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="13">
+<li>Vue3 如何实现混入？</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//答：Vue3使用 app.mixin() 方法来注册混入，例如 app.mixin({created() {console.log('mixin created')}}) 。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="14">
+<li>Vue3 如何实现自定义渲染函数？</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//答：Vue3使用 h() 函数来创建虚拟节点，例如 h('div', {class: 'container'}, 'Hello, world') 。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="15">
+<li><p>Vue3 中的响应式系统如何处理循环引用问题？<br>答：Vue3 中使用 WeakMap 来处理循环引用问题。</p>
+</li>
+<li><p>Vue3 如何实现全局状态管理？</p>
+<blockquote>
+<p>答：Vue3 中使用 provide() 和 inject() 函数来实现全局状态管理。</p>
+</blockquote>
+</li>
+<li><p>Vue3 中的 ref 指令有哪些用途？<br>答：Vue3 中的 ref 指令可以用来在组件内部获取子组件的实例，也可以用来获取 DOM 元素或其他组件的实例。</p>
+</li>
+<li><p>Vue3 中的 setup()函数有什么用途？<br>答：Vue3 中的 setup()函数是用来替代 Vue2 中的 data、methods 和 computed 等选项的。它可以用来创建响应式数据和添加需要在模板中使用的方法。</p>
+</li>
+<li><p>Vue3 如何使用 provide 和 inject 实现依赖注入？<br>答：在父组件中使用 provide() ，并在子组件中使用 inject() 来注入依赖项。</p>
+</li>
+<li><p>Vue3 如何实现异步验证表单输入？<br>答：使用 watch() 函数，监听表单输入的变化，并使用异步函数处理验证逻辑。</p>
+</li>
+<li><p>Vue3 中如何使用路由？<br>答：Vue3 中使用 Vue Router 来实现路由。首先需要安装 Vue Router，然后使用 createRouter() 函数创建路由对象，然后在根 Vue 实例中使用 app.use() 方法注册 Vue Router。</p>
+</li>
+<li><p>Vue3 中的 provide 注入的依赖项如何在子组件中更新？<br>答：通过给 provide 注入的对象添加响应式属性来让子组件能够更新依赖项。</p>
+</li>
+<li><p>Vue3 中如何使用 axios 发送 HTTP 请求？<br>答：在 Vue3 中使用 axios 发送 HTTP 请求，需要先安装 axios，并在组件中导入 axios。然后可以使用 axios 的 get、post、put、delete 等方法来发送 HTTP 请求。</p>
+</li>
+<li><p>Vue3 如何使用 vuex 进行状态管理？<br>答：Vue3 中使用 Vuex 进行状态管理，需要先安装 Vuex，并在根 Vue 实例中使用 app.use() 方法注册 Vuex。然后在组件中使用 store 选项来创建和访问 Vuex 的状态。</p>
+</li>
+<li><p>Vue3 中如何使用 emit 事件来与父组件通信？<br>答：在子组件中使用 this.$emit() 方法触发 emit 事件，并将需要传递的数据作为参数传递给父组件。</p>
+</li>
+<li><p>Vue3 中如何使用 slot 来构建可复用组件？</p>
+</li>
+</ol>
+<pre class="line-numbers language-js"><code class="language-js"><span class="token comment" spellcheck="true">//答：在组件中使用 &lt;slot> 元素来定义插槽，在父组件中使用 &lt;template v-slot:slot-name> 来填充插槽。</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<ol start="27">
+<li><p>Vue3 中如何处理条件渲染？<br>答：使用 v-if 指令来实现条件渲染。</p>
+</li>
+<li><p>Vue3 中如何处理列表渲染？<br>答：使用 v-for 指令来实现列表渲染。</p>
+</li>
+<li><p>Vue3 中如何处理动态绑定属性？<br>答：使用 v-bind 指令来实现动态绑定属性。</p>
+</li>
+<li><p>Vue3 中如何处理事件绑定？<br>答：使用 v-on 指令来实现事件绑定。</p>
+</li>
+</ol>
 <h3 id="六-REACT"><a href="#六-REACT" class="headerlink" title="六 REACT"></a>六 REACT</h3><h4 id="1、-请列举-react-生命周期函数。"><a href="#1、-请列举-react-生命周期函数。" class="headerlink" title="1、 请列举 react 生命周期函数。"></a>1、 请列举 react 生命周期函数。</h4><blockquote>
 <p>挂载：constructor –&gt; getDerivedStateFromProps –&gt; render –&gt; componentDidMount<br>更新： New props、setState() –&gt; getDerivedStateFromProps –&gt; shouldComponentUpdate –&gt; render –&gt; getSnapshotBeforeUpdate –&gt; componentDidUpdate forceUpdate() –&gt; getDerivedStateFromProps –&gt; render –&gt; getSnapshotBeforeUpdate –&gt; componentDidUpdate<br>卸载： componentWillUnmount</p>
 </blockquote>
@@ -1164,6 +1427,7 @@ return B();
 <li><p>8、 componentWillUnmount 在组件从 DOM 中移除之前立刻被调用。</p>
 </li>
 </ul>
+<h5 id="react-父子组件更新顺序"><a href="#react-父子组件更新顺序" class="headerlink" title="react 父子组件更新顺序"></a>react 父子组件更新顺序</h5><p><img src="react.jpg" alt></p>
 <h4 id="2-react-中不同组件之间如何做到数据交互？"><a href="#2-react-中不同组件之间如何做到数据交互？" class="headerlink" title="2. react 中不同组件之间如何做到数据交互？"></a>2. react 中不同组件之间如何做到数据交互？</h4><ol>
 <li>父组件向子组件通信：使用 props</li>
 <li>子组件向父组件通信：使用 props 回调</li>
@@ -1191,7 +1455,11 @@ return B();
 <p>react 本身:<br>(1)props——父组件向子组件通过 props 传参<br>(2)实例方法——在父组件中可以用 refs 引用子组件，之后就可以调用子 组件的实例方法了<br>(3)回调函数——用于子组件向父组件通信，子组件调用 props 传递过来的 方法<br>(4)状态提升——两个子组件可以通过父组件定义的参数进行传参<br>(5)Context 上下文——一般用作全局主题<br>(6)Render Props——渲染的细节由父组件控制<br>状态管理: (1) mobx/redux/dva——通过在 view 中触发 action，改变 state，进而 改变其他组件的 view</p>
 </blockquote>
 <h4 id="11-说说-React-的路由是什么？"><a href="#11-说说-React-的路由是什么？" class="headerlink" title="11. 说说 React 的路由是什么？"></a>11. 说说 React 的路由是什么？</h4><blockquote>
-<p>路由分为前端路由和后端路由，后端路由是服务器根据用户发起的请求而返回不同 内容，前端路由是客户端根据不同的 URL 去切换组件；在 web 应用前端开发中，路由系统是 最核心的部分，当页面的 URL 发生改变时，页面的显示结果可以根据 URL 的变化而变化，但 是页面不会刷新。 react 生态中路由通常是使用 react-router 来进行配置，其主要构成为：<br>（1）Router——对应路由的两种模式，包括<browsersrouter>与<hashrouter>；<br>（2）route matching 组件——控制路径对应的显示组件，可以进行同步加载和异步加载， <route>；<br>（3）navigation 组件——用做路由切换和跳转，<link>； BrowserRouter 与 HashRouter 的区别：<br>（1）底层原理不一样：BrowserRouter 使用的是 H5 的 history API，不兼容 IE9 及以下 版本；HashRouter 使用的是 URL 的哈希值；<br>（2）path 表现形式不一样：BrowserRouter 的路径中没有#,例如： localhost:3000/demo/test；HashRouter 的路径包含#,例如： localhost:3000/#/demo/test；<br>（3）刷新后对路由 state 参数的影响：BrowserRouter 没有任何影响，因为 state 保存在 history 对象中；HashRouter 刷新后会导致路由 state 参数的丢失；</route></hashrouter></browsersrouter></p>
+<p>路由分为前端路由和后端路由，后端路由是服务器根据用户发起的请求而返回不同 内容，前端路由是客户端根据不同的 URL 去切换组件；在 web 应用前端开发中，路由系统是 最核心的部分，当页面的 URL 发生改变时，页面的显示结果可以根据 URL 的变化而变化，但 是页面不会刷新。 react 生态中路由通常是使用 react-router 来进行配置，其主要构成为：<br>（1）Router——对应路由的两种模式，包括<browsersrouter>与<hashrouter>；<br>（2）route matching 组件——控制路径对应的显示组件，可以进行同步加载和异步加载， <route>；<br>（3）navigation 组件——用做路由切换和跳转，<link>；</route></hashrouter></browsersrouter></p>
+</blockquote>
+<p><strong>BrowserRouter 与 HashRouter 的区别：</strong></p>
+<blockquote>
+<p>（1）底层原理不一样：BrowserRouter 使用的是 H5 的 history API，不兼容 IE9 及以下 版本；HashRouter 使用的是 URL 的哈希值；<br>（2）path 表现形式不一样：BrowserRouter 的路径中没有#,例如： localhost:3000/demo/test；HashRouter 的路径包含#,例如： localhost:3000/#/demo/test；<br>（3）刷新后对路由 state 参数的影响：BrowserRouter 没有任何影响，因为 state 保存在 history 对象中；HashRouter 刷新后会导致路由 state 参数的丢失；</p>
 </blockquote>
 <h4 id="12-React-有哪些性能优化的手段？"><a href="#12-React-有哪些性能优化的手段？" class="headerlink" title="12. React 有哪些性能优化的手段？"></a>12. React 有哪些性能优化的手段？</h4><ul>
 <li>1、 使用纯组件；</li>
@@ -1309,12 +1577,12 @@ return B();
 <li>mode 模式 通过选择 development 或 production 之中的一个，来设置 mode 参数，你 可以启用相应模式下的 webpack 内置的优化</li>
 </ul>
 <h3 id="九-小程序"><a href="#九-小程序" class="headerlink" title="九 小程序"></a>九 小程序</h3><h4 id="1-请谈谈-wxml-与标准的-html-的异同？"><a href="#1-请谈谈-wxml-与标准的-html-的异同？" class="headerlink" title="1. 请谈谈 wxml 与标准的 html 的异同？"></a>1. 请谈谈 wxml 与标准的 html 的异同？</h4><pre class="line-numbers language-js"><code class="language-js"> 都是用来描述页面的结构；
-都由标签、属性等构成；
-标签名字不一样，且小程序标签更少，单一标签更多；
-多了一些 wx<span class="token punctuation">:</span><span class="token keyword">if</span> 这样的属性以及 <span class="token operator">**</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">**</span>这样的表达式
-WXML 仅能在微信小程序开发者工具中预览，而 HTML 可以在浏览器内 预览
-组件封装不同， WXML 对组件进行了重新封装，
-小程序运行在 JS Core 内，没有 DOM 树和 window 对象，小程序中无法 使用 window 对象和 document 对象。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ 都由标签、属性等构成；
+ 标签名字不一样，且小程序标签更少，单一标签更多；
+ 多了一些 wx<span class="token punctuation">:</span><span class="token keyword">if</span> 这样的属性以及 <span class="token operator">**</span><span class="token punctuation">{</span><span class="token punctuation">{</span> <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token operator">**</span>这样的表达式
+ WXML 仅能在微信小程序开发者工具中预览，而 HTML 可以在浏览器内 预览
+ 组件封装不同， WXML 对组件进行了重新封装，
+ 小程序运行在 JS Core 内，没有 DOM 树和 window 对象，小程序中无法 使用 window 对象和 document 对象。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h4 id="2-请谈谈-WXSS-和-CSS-的异同？"><a href="#2-请谈谈-WXSS-和-CSS-的异同？" class="headerlink" title="2. 请谈谈 WXSS 和 CSS 的异同？"></a>2. 请谈谈 WXSS 和 CSS 的异同？</h4><p>都是用来描述页面的样子；<br>WXSS 具有 CSS 大部分的特性，也做了一些扩充和修改；<br>WXSS 新增了尺寸单位，WXSS 在底层支持新的尺寸单位 rpx；<br>WXSS 仅支持部分 CSS 选择器；<br>WXSS 提供全局样式与局部样式<br>WXSS 不支持 window 和 dom 文档流</p>
 <h4 id="3-请谈谈小程序的双向绑定和-vue-的异同？"><a href="#3-请谈谈小程序的双向绑定和-vue-的异同？" class="headerlink" title="3.请谈谈小程序的双向绑定和 vue 的异同？"></a>3.请谈谈小程序的双向绑定和 vue 的异同？</h4><p>大体相同，但小程序直接 this.data 的属性是不可以同步到视图的，必须调用 this.setData() 方法！ 1.双向绑定：vue 默认支持双向绑定，微信小程序需要借助 data。 2.取值：vue 中，通过 this.reason 取值。小程序中，通过 this.data.reason 取值。 3.定义方法：小程序使用 在 app.js 中定义即可，vue 的方法通过写在 method 中进行定 义。</p>
 <h4 id="4-请谈谈小程序的生命周期函数？"><a href="#4-请谈谈小程序的生命周期函数？" class="headerlink" title="4.请谈谈小程序的生命周期函数？"></a>4.请谈谈小程序的生命周期函数？</h4><p>onLoad() 页面加载时触发，只会调用一次，可获取当前页面路径中的参 数。<br>onShow() 页面显示/切入前台时触发，一般用来发送数据请求；<br>onReady() 页面初次渲染完成时触发, 只会调用一次，代表页面已可和视 图层进行交互。<br>onHide() 页面隐藏/切入后台时触发, 如底部 tab 切换到其他页面或小 程序切入后台等。<br>onUnload() 页面卸载时触发，如 redirectTo 或 navigateBack 到其他页面 时。<br>onPullDownRefresh() 下拉刷新的钩子函数 用户下拉刷新时会自动走到 这个函数中<br>onReachBottom() 上翻到底的钩子函数</p>
@@ -1338,9 +1606,17 @@ WXML 仅能在微信小程序开发者工具中预览，而 HTML 可以在浏览
 <li>设置 data 的值 实现双向绑定</li>
 </ol>
 <h4 id="业务难点"><a href="#业务难点" class="headerlink" title="业务难点"></a>业务难点</h4><h4 id="支付环节，那么微信支付的-流程是否可以简单说-一下？"><a href="#支付环节，那么微信支付的-流程是否可以简单说-一下？" class="headerlink" title="支付环节，那么微信支付的 流程是否可以简单说 一下？"></a>支付环节，那么微信支付的 流程是否可以简单说 一下？</h4><p>临时凭证 获取 wxid<br>生成 repayid<br>json，返回给小程序，小程序调支付窗口。<br>支持成功提示 + POST 回调。</p>
-<h3 id="十-git-命令"><a href="#十-git-命令" class="headerlink" title="十 git 命令"></a>十 git 命令</h3><p>git config。配置 Git 的相关参数。Git 一共有 3 个配置文件：1.仓库级的配置文件： 在仓库的 …<br>git clone。从远程仓库克隆一个版本库到本地。# 默认在当前目录下创建和版本库名 相同的文件夹并 …<br>git init。初始化项目所在目录，初始化后会在当前目录下出现一个名为 .git 的目录。 # 初始化本地仓 …<br>git status。查看本地仓库的状态。# 查看本地仓库的状态 $ git status # 以简短模 式查看本地仓库的</p>
+<h3 id="十-git-命令"><a href="#十-git-命令" class="headerlink" title="十 git 命令"></a>十 git 命令</h3><h4 id="1-常用指令"><a href="#1-常用指令" class="headerlink" title="1. 常用指令"></a>1. 常用指令</h4><p>git config。配置 Git 的相关参数。Git 一共有 3 个配置文件：1.仓库级的配置文件： 在仓库的 …<br>git clone。从远程仓库克隆一个版本库到本地。# 默认在当前目录下创建和版本库名 相同的文件夹并 …<br>git init。初始化项目所在目录，初始化后会在当前目录下出现一个名为 .git 的目录。 # 初始化本地仓 …<br>git status。查看本地仓库的状态。# 查看本地仓库的状态 $ git status # 以简短模 式查看本地仓库的</p>
 <blockquote>
-<p>git init # 初始化本地代码仓<br>git add . # 添加本地代码<br>git commit -m “add local source” # 提交本地代码<br>git pull origin master # 下载远程代码<br>git merge master # 合并 master 分支<br>git push -u origin master # 上传代码</p>
+<p>git init # 初始化本地代码仓<br>git add . # 添加本地代码<br>git commit -m “add local source” # 提交本地代码<br>git pull origin master # 下载远程代码<br>git merge master # 合并 master 分支<br>git push -u origin master # 上传代码<br>git remote remove [shortname]  #删除代码代码</p>
+</blockquote>
+<h4 id="2-git-代码合并-merge-和-rebase-的区别"><a href="#2-git-代码合并-merge-和-rebase-的区别" class="headerlink" title="2. git 代码合并 merge 和 rebase 的区别"></a>2. git 代码合并 merge 和 rebase 的区别</h4><p>rebase和merge都是Git中用于合并分支的命令，但它们的实现方式不同。</p>
+<ul>
+<li>rebase:<code>将当前分支的提交节点移到目标分支的最新提交节点上</code>，避免了创建新的提交节点.<br>rebase的优点是得到更简洁的项目历史，去掉了merge commit，缺点是如果合并出现代码问题不容易定位，因为re-write了history </li>
+<li>merge:<code>将两个分支合并，保留两个分支的历史记录</code>，合并后会生成一个新的合并节点。<br>合并节点是一个特殊的节点，它有两个(或者多个)父节点，代表合并前的两个(或者多个)分支。 merge的优点是操作简单，缺点是提交历史记录比较杂乱</li>
+</ul>
+<blockquote>
+<p>总的来说，如果你想要保留分支的历史记录，那么使用merge是更好的选择。但是，如果你想要保持分支的线性发展，避免不必要的合并节点，</p>
 </blockquote>
 <h2 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h2><p>未完待续,持续更新中……</p>
 
@@ -1835,7 +2111,7 @@ WXML 仅能在微信小程序开发者工具中预览，而 HTML 可以在浏览
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="常见面试题总结基础篇">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="常见面试题总结基础篇">
                         
                         <span class="card-title">常见面试题总结基础篇</span>
                     </div>
@@ -1884,7 +2160,7 @@ WXML 仅能在微信小程序开发者工具中预览，而 HTML 可以在浏览
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="2019 年的思考总结">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="2019 年的思考总结">
                         
                         <span class="card-title">2019 年的思考总结</span>
                     </div>
@@ -2070,7 +2346,7 @@ WXML 仅能在微信小程序开发者工具中预览，而 HTML 可以在浏览
 
             
             &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-            <span class="white-color">77.8k</span>
+            <span class="white-color">81.4k</span>
             
 
             <br>
